@@ -1,0 +1,2835 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>International Week 2026–2027 · IIM Tiruchirappalli</title>
+    <meta
+      name="description"
+      content="Event guide, departures-style teaching schedule, and visiting faculty directory for International Week (04–10 Jan 2027) hosted by the International Relations Students Committee at IIM Tiruchirappalli."
+    />
+    <meta property="og:title" content="International Week 2026–2027 · IIM Tiruchirappalli" />
+    <meta
+      property="og:description"
+      content="Explore the 04–10 Jan 2027 teaching schedule, visiting international faculty, and organising committee for IIM Trichy International Week."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#11131C" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0C12'/%3E%3Crect x='6' y='6' width='52' height='52' rx='10' fill='none' stroke='%232D1EE8' stroke-width='3'/%3E%3Cpath d='M32 14c3.5 5 3.5 11 0 15-3.5-4-3.5-10 0-15zm-12 6c7 6 10 14 10 25h-4c0-9-3-16-8-22l2-3zm24 0l2 3c-5 6-8 13-8 22h-4c0-11 3-19 10-25z' fill='%23F4F5F8'/%3E%3Crect x='22' y='49' width='20' height='3' rx='1.5' fill='%234235FF'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ==========================================================================
+         Design Tokens — ID Card Theme + Formal Airport Terminal Signage
+         ========================================================================== */
+      :root {
+        /* Extracted ID Card Palette */
+        --color-primary: #2D1EE8;
+        --color-primary-bright: #4235FF;
+        --color-secondary: #1A1654;
+        --color-accent: #9B95FF;
+        --color-bg: #11131C;
+        --color-surface: #181A27;
+        --color-surface-elevated: #202334;
+        --color-board: #0B0C12; /* Darkest shade from ID card, not pure #000 */
+        --color-board-header: #131521;
+        --color-border: #2B2E43;
+        --color-text: #F4F5F8;
+        --color-text-muted: #A8ABC0;
+
+        /* Functional Status Colours (only non-ID-palette colours) */
+        --status-upcoming: #D99B26;
+        --status-in-session: #3BA573;
+        --status-concluded: #7C8094;
+
+        /* Typography */
+        --font-display: 'Archivo', system-ui, -apple-system, sans-serif;
+        --font-body: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+        --font-board: 'Barlow Condensed', 'Archivo', system-ui, sans-serif;
+
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --max-width: 1160px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-size: 15px;
+        line-height: 1.6;
+        padding-bottom: calc(74px + env(safe-area-inset-bottom));
+      }
+
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 0;
+        }
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+        color: inherit;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 16px;
+        top: -60px;
+        z-index: 100;
+        padding: 10px 16px;
+        border-radius: var(--radius-sm);
+        background: var(--color-primary);
+        color: #ffffff;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        top: 16px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        padding-inline: 16px;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding-inline: 28px;
+        }
+      }
+
+      /* ==========================================================================
+         Desktop Minimal Centered Navigation
+         ========================================================================== */
+      .desktop-header {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .desktop-header {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 40;
+          background: transparent;
+          border-bottom: 1px solid transparent;
+          transition:
+            background-color 220ms var(--ease-out),
+            border-color 220ms var(--ease-out),
+            backdrop-filter 220ms var(--ease-out);
+        }
+
+        .desktop-header.is-scrolled {
+          background: rgba(7, 9, 23, 0.88);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border-bottom-color: var(--color-border);
+        }
+      }
+
+      .desktop-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 68px;
+      }
+
+      .desktop-nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 36px;
+      }
+
+      .desktop-nav-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        min-height: 44px;
+        padding-inline: 4px;
+        font-family: var(--font-body);
+        font-size: 0.9375rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: rgba(244, 245, 248, 0.82);
+        text-decoration: none;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: color 160ms var(--ease-out);
+      }
+
+      .desktop-nav-link:hover,
+      .desktop-nav-link.is-active {
+        color: #ffffff;
+      }
+
+      .desktop-nav-underline {
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        height: 2px;
+        width: 40px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--color-primary-bright), var(--color-accent));
+        transform-origin: left center;
+        transition: transform 240ms var(--ease-out), opacity 180ms var(--ease-out);
+        pointer-events: none;
+      }
+
+      /* ==========================================================================
+         Mobile Fixed Bottom Signage Bar
+         ========================================================================== */
+      .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 45;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        height: calc(62px + env(safe-area-inset-bottom));
+        padding-bottom: env(safe-area-inset-bottom);
+        background: rgba(11, 12, 18, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--color-border);
+      }
+
+      @media (min-width: 768px) {
+        .mobile-bottom-nav {
+          display: none;
+        }
+      }
+
+      .mobile-tab {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        min-height: 48px;
+        padding: 6px 4px;
+        color: var(--color-text-muted);
+        text-decoration: none;
+        font-family: var(--font-board);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transition: color 160ms var(--ease-out), transform 140ms var(--ease-out);
+      }
+
+      .mobile-tab::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 22%;
+        right: 22%;
+        height: 2px;
+        border-radius: 0 0 2px 2px;
+        background: var(--color-accent);
+        transform: scaleX(0);
+        opacity: 0;
+        transition: transform 220ms var(--ease-out), opacity 180ms var(--ease-out);
+      }
+
+      .mobile-tab.is-active {
+        color: var(--color-text);
+      }
+
+      .mobile-tab.is-active::after {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+
+      .mobile-tab:active {
+        transform: scale(0.95);
+      }
+
+      .mobile-tab svg {
+        width: 19px;
+        height: 19px;
+        flex-shrink: 0;
+      }
+
+      /* ==========================================================================
+         Ambient Tiny Plane Crossing Screen Throughout
+         ========================================================================== */
+      .ambient-flight-layer {
+        position: fixed;
+        inset: 0;
+        z-index: 25;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .ambient-plane-runner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        color: rgba(244, 245, 248, 0.62);
+        will-change: transform, opacity;
+        animation: cruiseAcrossScreen 32s linear infinite;
+      }
+
+      .ambient-plane-contrail {
+        width: 42px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0%, rgba(155, 149, 255, 0.55) 100%);
+      }
+
+      .ambient-plane-svg {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+        display: block;
+      }
+
+      @keyframes cruiseAcrossScreen {
+        0% {
+          opacity: 0;
+          transform: translate3d(-12vw, 24vh, 0) rotate(-4deg);
+        }
+        5% {
+          opacity: 1;
+        }
+        93% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate3d(112vw, 10vh, 0) rotate(-4deg);
+        }
+      }
+
+      /* ==========================================================================
+         Start Page Hero — ID Card Gradient + Stacked Crest & Title
+         ========================================================================== */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 32px;
+        border-bottom: 1px solid var(--color-border);
+        background:
+          radial-gradient(circle at 90% 10%, rgba(44, 56, 178, 0.78) 0%, rgba(25, 34, 114, 0.34) 36%, transparent 64%),
+          radial-gradient(circle at 6% 94%, rgba(36, 48, 154, 0.72) 0%, rgba(18, 25, 92, 0.28) 38%, transparent 64%),
+          linear-gradient(135deg, #070917 0%, #0C102B 52%, #131B4C 100%);
+      }
+
+      @media (min-width: 768px) {
+        .hero {
+          padding-top: 92px;
+        }
+      }
+
+      .hero-main {
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: 28px 0 40px;
+      }
+
+      .hero-layout {
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 920px;
+      }
+
+      .hero-emblem {
+        width: auto;
+        height: 68px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      @media (min-width: 768px) {
+        .hero-emblem {
+          height: 84px;
+        }
+      }
+
+      .hero-kicker {
+        margin: 8px 0 0;
+        font-family: var(--font-body);
+        font-size: clamp(0.9375rem, 2vw, 1.375rem);
+        font-weight: 400;
+        line-height: 1.45;
+        color: rgba(244, 245, 248, 0.9);
+      }
+
+      .hero-title {
+        margin: 0;
+        width: 100%;
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 6.4vw, 4.75rem);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+        text-wrap: balance;
+      }
+
+      .hero-meta-line {
+        margin: 2px 0 0;
+        font-family: var(--font-board);
+        font-size: 1.0625rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .hero-welcome {
+        margin: 0;
+        max-width: 60ch;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        color: rgba(232, 235, 247, 0.78);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .hero-terminal-dock {
+        position: relative;
+        z-index: 2;
+        background: rgba(7, 9, 22, 0.62);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-top: 1px solid rgba(155, 149, 255, 0.16);
+      }
+
+      .terminal-clock-strip {
+        border-bottom: 1px solid rgba(155, 149, 255, 0.12);
+      }
+
+      .terminal-clock-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px 16px;
+        min-height: 38px;
+        padding: 6px 0;
+        font-family: var(--font-board);
+        font-size: 0.875rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+      }
+
+      .terminal-clock-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--color-text);
+      }
+
+      .terminal-clock-time {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--color-accent);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .ticker-bar {
+        background: transparent;
+      }
+
+      .ticker-inner {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 40px;
+        padding: 5px 0;
+      }
+
+      .ticker-tag {
+        flex-shrink: 0;
+        padding: 3px 8px;
+        border-radius: 4px;
+        background: var(--color-primary);
+        color: #ffffff;
+        font-family: var(--font-board);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .ticker-viewport {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .ticker-track {
+        display: inline-block;
+        white-space: nowrap;
+        font-family: var(--font-board);
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        color: var(--color-text);
+        font-variant-numeric: tabular-nums;
+        animation: tickerScroll 26s linear infinite;
+      }
+
+      .ticker-bar.is-paused .ticker-track {
+        animation-play-state: paused;
+        white-space: normal;
+        animation: none;
+        transform: none;
+        font-size: 0.9375rem;
+      }
+
+      @keyframes tickerScroll {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .ticker-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        min-height: 34px;
+        padding: 4px 10px;
+        border-radius: 6px;
+        border: 1px solid rgba(155, 149, 255, 0.25);
+        background: rgba(11, 12, 18, 0.55);
+        color: var(--color-text-muted);
+        font-family: var(--font-board);
+        font-size: 0.8125rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+      }
+
+      .ticker-toggle:hover {
+        color: var(--color-text);
+        border-color: var(--color-accent);
+      }
+
+      .hero-arc-ambient {
+        position: absolute;
+        right: -20px;
+        bottom: 100px;
+        width: min(640px, 85vw);
+        height: auto;
+        opacity: 0.28;
+        pointer-events: none;
+      }
+
+      .arc-mask-stroke {
+        stroke-dasharray: 820;
+        stroke-dashoffset: 820;
+        animation: drawArcOnce 1100ms var(--ease-out) 120ms forwards;
+      }
+
+      .arc-endpoint {
+        opacity: 0;
+        animation: fadeInEndpoint 260ms var(--ease-out) 1050ms forwards;
+      }
+
+      @keyframes drawArcOnce {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes fadeInEndpoint {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 11px 22px;
+        border-radius: var(--radius-sm);
+        border: 1px solid transparent;
+        font-family: var(--font-board);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+        transition:
+          transform 160ms var(--ease-out),
+          background-color 160ms var(--ease-out),
+          border-color 160ms var(--ease-out),
+          opacity 160ms var(--ease-out);
+      }
+
+      .btn:active {
+        transform: scale(0.98);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--color-primary-bright), var(--color-primary));
+        color: #ffffff;
+      }
+
+      .btn-primary:hover {
+        opacity: 0.94;
+        transform: translateY(-1px);
+      }
+
+      .btn-secondary {
+        background: var(--color-surface);
+        border-color: var(--color-border);
+        color: var(--color-text);
+      }
+
+      .btn-secondary:hover {
+        background: var(--color-surface-elevated);
+        border-color: var(--color-accent);
+        transform: translateY(-1px);
+      }
+
+      /* ==========================================================================
+         Sections & Airport Signage Headers
+         ========================================================================== */
+      .section {
+        padding: 44px 0;
+      }
+
+      @media (min-width: 768px) {
+        .section {
+          padding: 64px 0;
+        }
+      }
+
+      .section + .section {
+        border-top: 1px solid var(--color-border);
+      }
+
+      .signage-header {
+        margin-bottom: 24px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .signage-kicker-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+
+      .signage-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 28px;
+        height: 22px;
+        padding: 0 7px;
+        border-radius: 4px;
+        background: var(--color-primary);
+        color: #ffffff;
+        font-family: var(--font-board);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .signage-caption {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font-board);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      .signage-caption svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      .section-title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3.2vw, 2.125rem);
+        font-weight: 700;
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+        color: var(--color-text);
+        text-wrap: balance;
+      }
+
+      .section-subtitle {
+        margin: 6px 0 0;
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+      }
+
+      /* ==========================================================================
+         Faculty Search, Day Filter & Board Summary
+         ========================================================================== */
+
+      .field-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .field-icon {
+        position: absolute;
+        left: 14px;
+        width: 17px;
+        height: 17px;
+        color: var(--color-text-muted);
+        pointer-events: none;
+      }
+
+      .input,
+      .select {
+        width: 100%;
+        min-height: 44px;
+        padding: 10px 14px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-border);
+        background: var(--color-board);
+        color: var(--color-text);
+        font-size: 0.875rem;
+        transition: border-color 160ms var(--ease-out), background-color 160ms var(--ease-out);
+      }
+
+      .input-search {
+        padding-left: 40px;
+        padding-right: 36px;
+      }
+
+      .input::placeholder {
+        color: var(--color-text-muted);
+        opacity: 0.85;
+      }
+
+      .input:hover,
+      .select:hover {
+        border-color: #414563;
+      }
+
+      .input:focus,
+      .select:focus {
+        outline: none;
+        border-color: var(--color-accent);
+        background: var(--color-surface);
+      }
+
+      .clear-input-btn {
+        position: absolute;
+        right: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 6px;
+        background: transparent;
+        color: var(--color-text-muted);
+        cursor: pointer;
+      }
+
+      .clear-input-btn:hover {
+        color: var(--color-text);
+      }
+
+      .prof-controls {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .prof-controls {
+          grid-template-columns: 1.5fr 1fr auto;
+          align-items: center;
+        }
+      }
+
+      .prof-search-wrap {
+        width: 100%;
+      }
+
+      .board-summary {
+        margin: 0;
+        font-family: var(--font-board);
+        font-size: 0.9375rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+
+      .prof-exam-note {
+        margin-top: 18px;
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        background: var(--color-board);
+        border: 1px solid var(--color-border);
+        font-family: var(--font-board);
+        font-size: 0.9375rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 16px;
+      }
+
+      .prof-exam-note strong {
+        color: var(--color-text);
+        font-weight: 600;
+      }
+
+      /* Departures-Style Session Board inside Faculty Modal */
+      .modal-board {
+        border-radius: var(--radius-md);
+        background: var(--color-board);
+        border: 1px solid var(--color-border);
+        overflow: hidden;
+      }
+
+      .modal-board-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "when status"
+          "course course"
+          "venue venue";
+        gap: 4px 10px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .modal-board-row:last-child {
+        border-bottom: 0;
+      }
+
+      .modal-board-when {
+        grid-area: when;
+        font-family: var(--font-board);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--color-text);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .modal-board-status {
+        grid-area: status;
+        justify-self: end;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font-board);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .modal-board-course {
+        grid-area: course;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--color-text);
+      }
+
+      .modal-board-venue {
+        grid-area: venue;
+        font-family: var(--font-board);
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .status-upcoming .status-dot { background-color: var(--status-upcoming); }
+      .status-upcoming { color: var(--color-text); }
+      .status-in-session .status-dot { background-color: var(--status-in-session); }
+      .status-in-session { color: #8FE0B5; }
+      .status-concluded .status-dot { background-color: var(--status-concluded); }
+      .status-concluded { color: var(--color-text-muted); }
+
+      .is-flipping .flap-cell {
+        animation: splitFlap 320ms var(--ease-out) both;
+        animation-delay: var(--flap-delay, 0ms);
+        transform-origin: center top;
+      }
+
+      @keyframes splitFlap {
+        0% {
+          opacity: 0.15;
+          transform: perspective(500px) rotateX(-75deg);
+        }
+        60% {
+          opacity: 1;
+          transform: perspective(500px) rotateX(10deg);
+        }
+        100% {
+          opacity: 1;
+          transform: perspective(500px) rotateX(0deg);
+        }
+      }
+
+      .empty-state {
+        padding: 36px 20px;
+        text-align: center;
+        color: var(--color-text-muted);
+      }
+
+      .empty-state p {
+        margin: 0 0 14px;
+      }
+
+      /* ==========================================================================
+         Professors as Boarding-Pass Cards
+         ========================================================================== */
+      .prof-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 680px) {
+        .prof-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1080px) {
+        .prof-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
+        }
+      }
+
+      .boarding-pass {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        text-align: left;
+        cursor: pointer;
+        overflow: hidden;
+        transition:
+          transform 180ms var(--ease-out),
+          border-color 180ms var(--ease-out),
+          background-color 180ms var(--ease-out);
+      }
+
+      .boarding-pass:hover {
+        transform: translateY(-2px);
+        border-color: var(--color-accent);
+        background: var(--color-surface-elevated);
+      }
+
+      .boarding-pass:active {
+        transform: scale(0.985);
+      }
+
+      .pass-header-strip {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 9px 18px;
+        background: linear-gradient(90deg, var(--color-secondary), var(--color-board-header));
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .pass-header-title {
+        font-family: var(--font-board);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-text);
+      }
+
+      .pass-header-domain {
+        font-family: var(--font-board);
+        font-size: 0.8125rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      .pass-body {
+        padding: 16px 18px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .pass-person-row {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+      }
+
+      .prof-avatar-wrap {
+        position: relative;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, var(--color-primary-bright), var(--color-secondary));
+        border: 1px solid rgba(155, 149, 255, 0.35);
+      }
+
+      .prof-avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.08);
+      }
+
+      .prof-avatar-fallback {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .pass-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .pass-field-label {
+        display: block;
+        font-family: var(--font-board);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+      }
+
+      .pass-name {
+        margin: 1px 0 0;
+        font-family: var(--font-display);
+        font-size: 1.0625rem;
+        font-weight: 700;
+        line-height: 1.25;
+        color: var(--color-text);
+      }
+
+      .pass-value {
+        margin: 1px 0 0;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: var(--color-text);
+      }
+
+      .pass-value-accent {
+        color: var(--color-accent);
+      }
+
+      /* Perforated Notch Divider */
+      .pass-perforation {
+        position: relative;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        padding-inline: 14px;
+      }
+
+      .pass-perforation::before,
+      .pass-perforation::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        transform: translateY(-50%);
+      }
+
+      .pass-perforation::before {
+        left: -9px;
+      }
+
+      .pass-perforation::after {
+        right: -9px;
+      }
+
+      .pass-perforation-line {
+        width: 100%;
+        border-top: 1px dashed var(--color-border);
+      }
+
+      .pass-stub {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 18px 14px;
+      }
+
+      .pass-stub-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+      }
+
+      .pass-stub-venue {
+        font-family: var(--font-board);
+        font-size: 0.9375rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--color-text);
+      }
+
+      .pass-stub-action {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-family: var(--font-board);
+        font-size: 0.8125rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      /* Decorative CSS Barcode Strip */
+      .pass-barcode {
+        width: 82px;
+        height: 26px;
+        flex-shrink: 0;
+        opacity: 0.72;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--color-text) 0 2px,
+          transparent 2px 4px,
+          var(--color-text) 4px 5px,
+          transparent 5px 8px,
+          var(--color-text) 8px 11px,
+          transparent 11px 13px,
+          var(--color-text) 13px 14px,
+          transparent 14px 17px
+        );
+      }
+
+      /* ==========================================================================
+         Organising Committee Footer Panel
+         ========================================================================== */
+      .footer-section {
+        padding: 48px 0 56px;
+        border-top: 1px solid var(--color-border);
+        background: var(--color-board);
+      }
+
+      .committee-panel {
+        padding: 22px;
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+      }
+
+      .chair-signage-row {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .chair-label {
+        margin: 0 0 4px;
+        font-family: var(--font-board);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      .chair-name {
+        margin: 0 0 8px;
+        font-family: var(--font-display);
+        font-size: clamp(1.375rem, 3vw, 1.75rem);
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--color-text);
+      }
+
+      .chair-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        margin: 0;
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+      }
+
+      .chair-contact a {
+        color: var(--color-text);
+        text-decoration: underline;
+        text-decoration-color: var(--color-border);
+        text-underline-offset: 3px;
+      }
+
+      .chair-contact a:hover {
+        color: var(--color-accent);
+      }
+
+      .team-list-heading {
+        margin: 0 0 12px;
+        font-family: var(--font-board);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      @media (min-width: 640px) {
+        .team-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .team-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .team-member {
+        padding: 8px 0;
+        border-bottom: 1px solid var(--color-border);
+        font-size: 0.9375rem;
+        color: var(--color-text);
+      }
+
+      .footer-colophon {
+        margin: 24px 0 0;
+        font-family: var(--font-board);
+        font-size: 0.8125rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+      }
+
+      /* ==========================================================================
+         Professor Sessions Drawer / Modal
+         ========================================================================== */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background: rgba(5, 5, 9, 0.78);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms var(--ease-out);
+      }
+
+      @media (min-width: 640px) {
+        .modal-backdrop {
+          align-items: center;
+          padding: 24px;
+        }
+      }
+
+      .modal-backdrop.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .modal-panel {
+        width: 100%;
+        max-width: 600px;
+        max-height: 86vh;
+        overflow-y: auto;
+        padding: 20px 20px calc(24px + env(safe-area-inset-bottom));
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        transform: translateY(20px);
+        transition: transform 240ms var(--ease-out);
+      }
+
+      @media (min-width: 640px) {
+        .modal-panel {
+          padding: 26px;
+          border-radius: var(--radius-lg);
+          transform: translateY(10px) scale(0.985);
+        }
+      }
+
+      .modal-backdrop.is-open .modal-panel {
+        transform: translateY(0) scale(1);
+      }
+
+      .modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+
+      .modal-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-border);
+        background: var(--color-board);
+        color: var(--color-text);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      .modal-close:hover {
+        border-color: var(--color-accent);
+      }
+
+      .modal-bio {
+        margin: 0 0 18px;
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: var(--color-text-muted);
+      }
+
+      .modal-sessions-title {
+        margin: 0 0 10px;
+        font-family: var(--font-board);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+
+      /* ==========================================================================
+         Scroll Reveal & Reduced Motion
+         ========================================================================== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity 320ms var(--ease-out),
+          transform 320ms var(--ease-out);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .ambient-flight-layer {
+          display: none;
+        }
+        .ticker-track {
+          animation: none;
+          transform: none;
+          white-space: normal;
+        }
+        .arc-mask-stroke {
+          animation: none;
+          stroke-dashoffset: 0;
+        }
+        .arc-endpoint {
+          animation: none;
+          opacity: 1;
+        }
+        .is-flipping .flap-cell {
+          animation: none !important;
+          opacity: 1;
+          transform: none;
+        }
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Ambient Tiny Aircraft Crossing Screen Throughout -->
+    <div class="ambient-flight-layer" aria-hidden="true">
+      <div class="ambient-plane-runner">
+        <span class="ambient-plane-contrail"></span>
+        <svg class="ambient-plane-svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12c0 .6-.7 1.1-1.8 1.2l-5.7.5-4.3 7.3H8.5l2.1-7.1-4.8-.4-2 2.8H2.4l1.2-4.3-1.2-4.3h1.4l2 2.8 4.8-.4L8.5 3h1.7l4.3 7.3 5.7.5c1.1.1 1.8.6 1.8 1.2z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Desktop Minimal Centered Navigation -->
+    <header class="desktop-header" id="desktop-header">
+      <div class="container desktop-header-inner">
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="desktop-nav-link is-active" href="#home" data-nav="home">
+            <span>Home</span>
+          </a>
+          <a class="desktop-nav-link" href="#professors" data-nav="professors">
+            <span>Faculty</span>
+          </a>
+          <a class="desktop-nav-link" href="#team" data-nav="team">
+            <span>Team</span>
+          </a>
+          <span class="desktop-nav-underline" id="desktop-nav-underline" aria-hidden="true"></span>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 1. Start Page / Hero -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <svg class="hero-arc-ambient" viewBox="0 0 640 180" fill="none" aria-hidden="true">
+          <defs>
+            <mask id="arc-reveal-mask">
+              <path
+                class="arc-mask-stroke"
+                d="M 24 146 Q 320 8 604 88"
+                stroke="#ffffff"
+                stroke-width="8"
+                stroke-linecap="round"
+              />
+            </mask>
+          </defs>
+          <path
+            d="M 24 146 Q 320 8 604 88"
+            stroke="#9B95FF"
+            stroke-width="1.5"
+            stroke-dasharray="6 6"
+            mask="url(#arc-reveal-mask)"
+          />
+          <g class="arc-endpoint" transform="translate(604, 88)">
+            <circle cx="0" cy="0" r="4" fill="#4235FF" stroke="#F4F5F8" stroke-width="1.5" />
+            <path d="M -15 -8 L 1 -1 L -9 4 L -8 -1 Z" fill="#F4F5F8" />
+          </g>
+        </svg>
+
+        <div class="hero-main">
+          <div class="container hero-layout">
+            <div class="hero-inner">
+              <img
+                class="hero-emblem"
+                src="./assets/iim-trichy-emblem.png"
+                alt="IIM Tiruchirappalli crest"
+                width="64"
+                height="84"
+                onerror="this.style.display='none'"
+              />
+              <p class="hero-kicker" id="hero-kicker"></p>
+              <h1 class="hero-title" id="hero-title"></h1>
+              <p class="hero-meta-line" id="hero-meta"></p>
+              <p class="hero-welcome" id="hero-welcome"></p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#professors">
+                  <span>Faculty &amp; Schedule</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </a>
+                <a class="btn btn-secondary" href="#team">
+                  <span>Organising Committee</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M7 17 17 7M9 7h8v8" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Terminal Clock & Next-Session Ticker Dock -->
+        <div class="hero-terminal-dock">
+          <div class="terminal-clock-strip">
+            <div class="container terminal-clock-inner">
+              <span class="terminal-clock-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                  <path d="M12 22s7-5.8 7-12a7 7 0 1 0-14 0c0 6.2 7 12 7 12Z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                <span>IIM Tiruchirappalli · International Week</span>
+              </span>
+              <span class="terminal-clock-time" aria-live="off">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+                <span id="live-ist-clock">Loading IST time</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="ticker-bar" id="ticker-bar" role="region" aria-label="Next upcoming session bulletin">
+            <div class="container ticker-inner">
+              <span class="ticker-tag">Next</span>
+              <div class="ticker-viewport">
+                <span class="ticker-track" id="ticker-track">Loading upcoming session…</span>
+              </div>
+              <button
+                class="ticker-toggle"
+                id="ticker-toggle"
+                type="button"
+                aria-pressed="false"
+                aria-label="Pause session ticker"
+              >
+                Pause
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Faculty & Session Schedules -->
+      <section class="section" id="professors" aria-labelledby="professors-heading">
+        <div class="container">
+          <div class="signage-header reveal">
+            <div class="signage-kicker-row">
+              <span class="signage-badge">01</span>
+              <span class="signage-caption">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <circle cx="9" cy="11" r="2.2" />
+                  <path d="M6.5 16c.6-1.5 1.5-2.2 2.5-2.2s1.9.7 2.5 2.2M14 10h4M14 14h4" />
+                </svg>
+                <span>Arrivals · Faculty &amp; Schedules</span>
+              </span>
+            </div>
+            <h2 class="section-title" id="professors-heading">Faculty</h2>
+            <p class="section-subtitle" id="professors-subtitle"></p>
+          </div>
+
+          <div class="prof-controls">
+            <div class="field-wrap prof-search-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              <input
+                id="prof-search"
+                class="input input-search"
+                type="search"
+                placeholder="Search professor, institution, country, or session"
+                aria-label="Search visiting faculty"
+              />
+              <button
+                id="prof-search-clear"
+                class="clear-input-btn"
+                type="button"
+                aria-label="Clear faculty search"
+                hidden
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M18 6 6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <select id="prof-day-filter" class="select" aria-label="Filter faculty by teaching day">
+              <option value="">All Teaching Days (04–09 Jan)</option>
+            </select>
+
+            <p class="board-summary" id="prof-summary"></p>
+          </div>
+
+          <div class="prof-grid" id="prof-grid"></div>
+
+          <div class="prof-exam-note">
+            <span><strong>End Term Exam</strong> · Sunday, 10 January 2027</span>
+            <span>Timing TBA · IIM Tiruchirappalli</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 3. Organising Committee Footer Panel -->
+    <footer class="footer-section" id="team" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="signage-header reveal">
+          <div class="signage-kicker-row">
+            <span class="signage-badge">02</span>
+            <span class="signage-caption">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                <circle cx="9" cy="8" r="3" />
+                <circle cx="16.5" cy="9" r="2.2" />
+                <path d="M3 19.5c0-3 2.7-5 6-5s6 2 6 5M15.5 14.7c2.4.4 5 1.8 5 4.8" />
+              </svg>
+              <span>Administration · IRSC</span>
+            </span>
+          </div>
+          <h2 class="section-title" id="team-heading">Organising Committee</h2>
+          <p class="section-subtitle">International Relations Students Committee · Indian Institute of Management Tiruchirappalli</p>
+        </div>
+
+        <div class="committee-panel reveal">
+          <div class="chair-signage-row" id="chair-block"></div>
+          <h3 class="team-list-heading">IRSC Team</h3>
+          <ul class="team-grid" id="team-grid"></ul>
+        </div>
+
+        <p class="footer-colophon" id="footer-colophon"></p>
+      </div>
+    </footer>
+
+    <!-- Mobile Fixed Signage Strip Navigation -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+      <a class="mobile-tab is-active" href="#home" data-nav="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a class="mobile-tab" href="#professors" data-nav="professors">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <circle cx="9" cy="11" r="2.2" />
+          <path d="M6.5 16c.6-1.5 1.5-2.2 2.5-2.2s1.9.7 2.5 2.2M14 10h4M14 14h4" />
+        </svg>
+        <span>Faculty</span>
+      </a>
+      <a class="mobile-tab" href="#team" data-nav="team">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <circle cx="9" cy="8" r="3" />
+          <circle cx="16.5" cy="9" r="2.2" />
+          <path d="M3 19.5c0-3 2.7-5 6-5s6 2 6 5M15.5 14.7c2.4.4 5 1.8 5 4.8" />
+        </svg>
+        <span>Team</span>
+      </a>
+    </nav>
+
+    <!-- Professor Boarding-Pass & Timetable Sheet -->
+    <div
+      class="modal-backdrop"
+      id="prof-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-prof-name"
+      hidden
+    >
+      <div class="modal-panel" id="modal-panel">
+        <div class="modal-header">
+          <div class="pass-person-row">
+            <div class="prof-avatar-wrap" id="modal-avatar-wrap"></div>
+            <div>
+              <h3 class="pass-name" id="modal-prof-name"></h3>
+              <p class="pass-value" id="modal-prof-designation" style="color: var(--color-text-muted);"></p>
+              <p class="pass-value pass-value-accent" id="modal-prof-affiliation"></p>
+            </div>
+          </div>
+          <button class="modal-close" id="modal-close" type="button" aria-label="Close professor details">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <p class="modal-bio" id="modal-prof-bio"></p>
+
+        <h4 class="modal-sessions-title" id="modal-sessions-title">Session Schedule</h4>
+        <div class="modal-board" id="modal-board"></div>
+      </div>
+    </div>
+
+    <script>
+      /* ==========================================================================
+         EDITABLE EVENT DATA — Update event info, professors, schedule, or team here
+         ========================================================================== */
+      const EVENT_DATA = {
+        event: {
+          name: "International Week 2026–2027",
+          organiser: "International Relations Students Committee",
+          institution: "Indian Institute of Management Tiruchirappalli",
+          datesLabel: "04 Jan – 10 Jan 2027",
+          teachingWindow: "Teaching: 04–09 Jan 2027 · End Term Exam: 10 Jan 2027",
+          venue: "IIM Tiruchirappalli",
+          welcome:
+            "Event guide, visiting faculty boarding passes, and session schedules for International Week."
+        },
+
+        // Only the 15 visiting professors appearing in the Jan 2027 timetable & arrivals card
+        professors: [
+          {
+            id: "RR",
+            name: "Prof. Rajesh Rajguru",
+            designation: "Senior Lecturer in Marketing",
+            institution: "University of Tasmania",
+            country: "Australia",
+            isoCode: "AUS",
+            domain: "Marketing",
+            photo: "./assets/professors/rajesh-rajguru.jpg",
+            courses: [
+              { code: "EMTG", title: "Entrepreneurial Marketing" },
+              { code: "Su-M", title: "Sustainable Marketing" }
+            ],
+            bio: "Dr. Rajesh Rajaguru, Senior Lecturer in Marketing at the University of Tasmania, specializes in agribusiness, supply chain integration, and digital adoption, with research focused on B2B relationships, regional resilience, and sustainable markets."
+          },
+          {
+            id: "SM",
+            name: "Prof. Saurabh Mishra",
+            designation: "Marketing Professor",
+            institution: "George Mason University",
+            country: "United States",
+            isoCode: "USA",
+            domain: "Marketing",
+            photo: "./assets/professors/saurabh-mishra.jpg",
+            courses: [
+              { code: "GEN-AI", title: "Generative AI for Marketing: From Insight to Investment" }
+            ],
+            bio: "Prof. Saurabh Mishra, Marketing Professor at George Mason University, specializes in consumer behavior, customer analytics, and service outsourcing across North America and India."
+          },
+          {
+            id: "MO",
+            name: "Prof. Marc Opresnik",
+            designation: "Marketing Professor",
+            institution: "TH Lubeck",
+            country: "Germany",
+            isoCode: "DEU",
+            domain: "Marketing",
+            photo: "./assets/professors/marc-opresnik.jpg",
+            courses: [
+              {
+                code: "PS-MS",
+                title: "Pivotal Strategy: Mastering Strategic Management, Marketing, Leadership & Growth in the age of AI and Disruption"
+              }
+            ],
+            bio: "Distinguished marketing professor, global thought leader, and creator of the PIVOTAL Infinity Marketing Canvas® driving purpose-driven growth strategies worldwide."
+          },
+          {
+            id: "VK",
+            name: "Prof. Vladimir Kolchanov",
+            designation: "Economics Professor",
+            institution: "International Management Institute of Saint Petersburg",
+            country: "Russia",
+            isoCode: "RUS",
+            domain: "Economics",
+            photo: "./assets/professors/vladimir-kolchanov.jpg",
+            courses: [
+              { code: "MIBR", title: "Mastering International Business in the Russia-India Context" }
+            ],
+            bio: "Prof. Vladimir Kolchanov, Economics Professor at the International Management Institute of Saint Petersburg, brings extensive experience in international business education, academic accreditation, strategic consulting, and cross-border Russia-India business frameworks."
+          },
+          {
+            id: "MA",
+            name: "Prof. Mohit Anand",
+            designation: "Economics Professor",
+            institution: "Emlyon Business School",
+            country: "France",
+            isoCode: "FRA",
+            domain: "Economics",
+            photo: "./assets/professors/mohit-anand.jpg",
+            courses: [
+              { code: "GPB", title: "Geopolitics and Business" }
+            ],
+            bio: "Prof. Mohit Anand, Economics Professor at Emlyon Business School, specializes in geopolitics and business. Formerly heading FORE's Emerging Markets Centre. His articles regularly appears across leading Indian and French newspapers."
+          },
+          {
+            id: "AS",
+            name: "Prof. Amitrajit Sarkar",
+            designation: "Public Policy Professor",
+            institution: "Ara Institute of Canterbury",
+            country: "",
+            isoCode: "",
+            domain: "Public Policy",
+            photo: "./assets/professors/amitrajit-sarkar.jpg",
+            courses: [
+              { code: "IEGS", title: "Introduction to E-Governance and Smart City" }
+            ],
+            bio: "Prof. Amitrajit Sarkar, Public Policy Professor at Ara Institute of Canterbury, specializes in e-governance and smart cities. Honored with a GIAN Fellowship, this research advances IT governance and digital resilience."
+          },
+          {
+            id: "SA",
+            name: "Prof. Satish Ananthaswamy",
+            designation: "Educator & Senior Managing Director",
+            institution: "Haas School of Business, University of California Berkeley",
+            country: "United States",
+            isoCode: "USA",
+            domain: "Finance",
+            photo: "./assets/professors/satish-ananthaswamy.jpg",
+            courses: [
+              { code: "FFI", title: "Fundamentals of Fixed Income Investing" }
+            ],
+            bio: "Earl Cheit Award-winning educator (2025) serving as Senior Managing Director at UC Investments since 1998."
+          },
+          {
+            id: "PT",
+            name: "Prof. Piyush Tiwari",
+            designation: "Visiting Faculty (Finance / Economics)",
+            institution: "University of Melbourne",
+            country: "Australia",
+            isoCode: "AUS",
+            domain: "Finance/Economics",
+            photo: "./assets/professors/piyush-tiwari.jpg",
+            courses: [
+              { code: "RESD", title: "Real Estate Strategies and Decisions" }
+            ],
+            bio: "Global real estate and urban development expert with extensive academic and industry experience across India, Japan, and the UK, including serving as Director of Policy at IDFC."
+          },
+          {
+            id: "GR",
+            name: "Prof. Gulasekaran Rajaguru",
+            designation: "Econometrics Professor",
+            institution: "Bond University, Gold Coast",
+            country: "Australia",
+            isoCode: "AUS",
+            domain: "ISA/Finance · ISA/OMDS",
+            photo: "./assets/professors/gulasekaran-rajaguru.jpg",
+            courses: [
+              { code: "BDA", title: "Business Data Analytics With Categorical and Censored Outcomes" },
+              { code: "FTSM", title: "Financial Trading System With Machine Learning" }
+            ],
+            bio: "Prof. Gulasekaran Rajaguru, Econometrics Professor at Bond University, specializes in machine learning trading systems and data analytics. Extensive research in economic forecasting appears across journals like Oxford Economic Papers."
+          },
+          {
+            id: "RM",
+            name: "Prof. Ravi Mateti",
+            designation: "Visiting Faculty (Finance)",
+            institution: "Concordia University, Montreal",
+            country: "Canada",
+            isoCode: "CAN",
+            domain: "Finance",
+            photo: "./assets/professors/ravi-mateti.jpg",
+            courses: [
+              { code: "ADPRM", title: "Beyond Black–Scholes, Advanced Derivative Pricing and Risk Management" }
+            ],
+            bio: "Prof. Ravi Mateti specializes in advanced derivative pricing and risk management, with research published across top global finance journals."
+          },
+          {
+            id: "SS",
+            name: "Prof. Sachidanandam Sakthivel",
+            designation: "Professor Emeritus",
+            institution: "Bowling Green State University",
+            country: "United States",
+            isoCode: "USA",
+            domain: "Information Systems and Analytics",
+            photo: "./assets/professors/sachidanandam-sakthivel.jpg",
+            courses: [
+              { code: "BMSI", title: "A Business Manager’s Road Map To Planning Strategic Information Technologies" }
+            ],
+            bio: "With over 33 years of experience in management information systems, Dr. Sachi Sakthivel transitioned to professor emeritus after a distinguished three-decade career at BGSU."
+          },
+          {
+            id: "NM",
+            name: "Prof. Nirup Menon",
+            designation: "Information Systems Professor",
+            institution: "George Mason University",
+            country: "United States",
+            isoCode: "USA",
+            domain: "Information Systems and Analytics",
+            photo: "./assets/professors/nirup-menon.jpg",
+            courses: [
+              { code: "MDT-AI", title: "Managing Digital Transformation in the AI Era" }
+            ],
+            bio: "Prof. Nirup Menon, Information Systems Professor at George Mason University, explores digital transformation, healthcare technology, and information security. Recipient of a $100,000 cybersecurity grant, this research advances AI-era platform innovation."
+          },
+          {
+            id: "MC",
+            name: "Prof. Mathew Cronin",
+            designation: "OBHR Professor",
+            institution: "George Mason University",
+            country: "United States",
+            isoCode: "USA",
+            domain: "OBHR",
+            photo: "./assets/professors/mathew-cronin.jpg",
+            courses: [
+              { code: "ATDM", title: "Adaptive Thinking and Decision Making" }
+            ],
+            bio: "Prof. Mathew Cronin, OBHR Professor at George Mason University, specializes in adaptive thinking and decision making. Co-authoring The Craft of Creativity, this scholarship frames creativity as a skill driving innovation."
+          },
+          {
+            id: "YP",
+            name: "Prof. Yaroslav Pavlov",
+            designation: "Rector & Strategy Professor",
+            institution: "International Management Institute of Saint Petersburg",
+            country: "Russia",
+            isoCode: "RUS",
+            domain: "Strategy",
+            photo: "./assets/professors/yaroslav-pavlov.jpg",
+            courses: [
+              { code: "NUTS", title: "Navigating Uncertainty: Trends, Scenarios, and Strategic Choices" }
+            ],
+            bio: "IMISP Rector Prof. Yaroslav Pavlov specializes in strategic decision-making, intellectual capital, and navigating market uncertainty to build organizational competitiveness."
+          },
+          {
+            id: "DH",
+            name: "Prof. Dominic Hammer",
+            designation: "OBHR Professor",
+            institution: "HM Business School",
+            country: "Germany",
+            isoCode: "DEU",
+            domain: "OBHR",
+            photo: "./assets/professors/dominic-hammer.jpg",
+            courses: [
+              { code: "ALT", title: "Applied Leadership Training" }
+            ],
+            bio: "Prof. Dominic Hammer, OBHR Professor at HM Business School and former Vice Dean for International Affairs, combines 13 years of German military officer service with executive director experience in India to deliver applied leadership training."
+          }
+        ],
+
+        courses: {
+          "ATDM Gr.1": { code: "ATDM Gr.1", title: "Adaptive Thinking and Decision Making (Gr.1)", profId: "MC" },
+          "ATDM Gr.2": { code: "ATDM Gr.2", title: "Adaptive Thinking and Decision Making (Gr.2)", profId: "MC" },
+          "GPB Gr.1": { code: "GPB Gr.1", title: "Geopolitics and Business (Gr.1)", profId: "MA" },
+          "GPB Gr.2": { code: "GPB Gr.2", title: "Geopolitics and Business (Gr.2)", profId: "MA" },
+          "GEN-AI Gr.1": { code: "GEN-AI Gr.1", title: "Generative AI for Marketing: From Insight to Investment (Gr.1)", profId: "SM" },
+          "GEN-AI Gr.2": { code: "GEN-AI Gr.2", title: "Generative AI for Marketing: From Insight to Investment (Gr.2)", profId: "SM" },
+          "BDA": { code: "BDA", title: "Business Data Analytics With Categorical and Censored Outcomes", profId: "GR" },
+          "Su-M": { code: "Su-M", title: "Sustainable Marketing", profId: "RR" },
+          "IEGS": { code: "IEGS", title: "Introduction to E-Governance and Smart City", profId: "AS" },
+          "RESD": { code: "RESD", title: "Real Estate Strategies and Decisions", profId: "PT" },
+          "BMSI": { code: "BMSI", title: "A Business Manager’s Road Map To Planning Strategic Information Technologies", profId: "SS" },
+          "ADPRM": { code: "ADPRM", title: "Beyond Black–Scholes, Advanced Derivative Pricing and Risk Management", profId: "RM" },
+          "PS-MS Gr.1": { code: "PS-MS Gr.1", title: "Pivotal Strategy: Mastering Strategic Management, Marketing, Leadership & Growth in the age of AI and Disruption (Gr.1)", profId: "MO" },
+          "PS-MS Gr.2": { code: "PS-MS Gr.2", title: "Pivotal Strategy: Mastering Strategic Management, Marketing, Leadership & Growth in the age of AI and Disruption (Gr.2)", profId: "MO" },
+          "MDT-AI": { code: "MDT-AI", title: "Managing Digital Transformation in the AI Era", profId: "NM" },
+          "ALT": { code: "ALT", title: "Applied Leadership Training", profId: "DH" },
+          "FTSM": { code: "FTSM", title: "Financial Trading System With Machine Learning", profId: "GR" },
+          "EMTG": { code: "EMTG", title: "Entrepreneurial Marketing", profId: "RR" },
+          "FFI": { code: "FFI", title: "Fundamentals of Fixed Income Investing", profId: "SA" },
+          "NUTS": { code: "NUTS", title: "Navigating Uncertainty: Trends, Scenarios, and Strategic Choices", profId: "YP" },
+          "MIBR": { code: "MIBR", title: "Mastering International Business in the Russia-India Context", profId: "VK" }
+        },
+
+        slots: [
+          { id: "makeup", label: "Make-up", timeLabel: "07:30 – 09:00 IST", startMin: 7 * 60 + 30, endMin: 9 * 60 },
+          { id: "slot1a", label: "Slot 1", timeLabel: "09:45 – 11:15 IST", startMin: 9 * 60 + 45, endMin: 11 * 60 + 15 },
+          { id: "slot1b", label: "Slot 1", timeLabel: "11:30 – 13:00 IST", startMin: 11 * 60 + 30, endMin: 13 * 60 },
+          { id: "slot2a", label: "Slot 2", timeLabel: "14:00 – 15:30 IST", startMin: 14 * 60, endMin: 15 * 60 + 30 },
+          { id: "slot2b", label: "Slot 2", timeLabel: "15:45 – 17:15 IST", startMin: 15 * 60 + 45, endMin: 17 * 60 + 15 },
+          { id: "slot3a", label: "Slot 3", timeLabel: "17:45 – 19:15 IST", startMin: 17 * 60 + 45, endMin: 19 * 60 + 15 },
+          { id: "slot3b", label: "Slot 3", timeLabel: "19:45 – 21:15 IST", startMin: 19 * 60 + 45, endMin: 21 * 60 + 15 }
+        ],
+
+        scheduleDays: [
+          {
+            dayNumber: "01",
+            date: "2027-01-04",
+            shortDay: "Mon",
+            shortDate: "04 Jan",
+            fullLabel: "Monday, 04 January 2027",
+            sessionsBySlot: {
+              slot1a: [
+                { courseKey: "ATDM Gr.1", room: "Room TBA" },
+                { courseKey: "GPB Gr.1", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.1", room: "Room TBA" },
+                { courseKey: "BDA", room: "Room TBA" },
+                { courseKey: "Su-M", room: "Room TBA" }
+              ],
+              slot1b: [
+                { courseKey: "ATDM Gr.1", room: "Room TBA" },
+                { courseKey: "GPB Gr.1", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.1", room: "Room TBA" },
+                { courseKey: "BDA", room: "Room TBA" },
+                { courseKey: "Su-M", room: "Room TBA" }
+              ],
+              slot2a: [
+                { courseKey: "IEGS", room: "Room TBA" },
+                { courseKey: "RESD", room: "Room TBA" },
+                { courseKey: "BMSI", room: "Room TBA" }
+              ],
+              slot2b: [
+                { courseKey: "IEGS", room: "Room TBA" },
+                { courseKey: "RESD", room: "Room TBA" },
+                { courseKey: "BMSI", room: "Room TBA" }
+              ],
+              slot3a: [
+                { courseKey: "ATDM Gr.2", room: "Room TBA" },
+                { courseKey: "GPB Gr.2", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.2", room: "Room TBA" },
+                { courseKey: "ADPRM", room: "Room TBA" }
+              ],
+              slot3b: [
+                { courseKey: "ATDM Gr.2", room: "Room TBA" },
+                { courseKey: "GPB Gr.2", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.2", room: "Room TBA" },
+                { courseKey: "ADPRM", room: "Room TBA" }
+              ]
+            }
+          },
+          {
+            dayNumber: "02",
+            date: "2027-01-05",
+            shortDay: "Tue",
+            shortDate: "05 Jan",
+            fullLabel: "Tuesday, 05 January 2027",
+            sessionsBySlot: {
+              slot1a: [
+                { courseKey: "ATDM Gr.1", room: "Room TBA" },
+                { courseKey: "GPB Gr.1", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.1", room: "Room TBA" },
+                { courseKey: "BDA", room: "Room TBA" },
+                { courseKey: "Su-M", room: "Room TBA" }
+              ],
+              slot1b: [
+                { courseKey: "ATDM Gr.1", room: "Room TBA" },
+                { courseKey: "GPB Gr.1", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.1", room: "Room TBA" },
+                { courseKey: "BDA", room: "Room TBA" },
+                { courseKey: "Su-M", room: "Room TBA" }
+              ],
+              slot2a: [
+                { courseKey: "IEGS", room: "Room TBA" },
+                { courseKey: "RESD", room: "Room TBA" },
+                { courseKey: "BMSI", room: "Room TBA" }
+              ],
+              slot2b: [
+                { courseKey: "IEGS", room: "Room TBA" },
+                { courseKey: "RESD", room: "Room TBA" },
+                { courseKey: "BMSI", room: "Room TBA" }
+              ],
+              slot3a: [
+                { courseKey: "ATDM Gr.2", room: "Room TBA" },
+                { courseKey: "GPB Gr.2", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.2", room: "Room TBA" },
+                { courseKey: "ADPRM", room: "Room TBA" }
+              ],
+              slot3b: [
+                { courseKey: "ATDM Gr.2", room: "Room TBA" },
+                { courseKey: "GPB Gr.2", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.2", room: "Room TBA" },
+                { courseKey: "ADPRM", room: "Room TBA" }
+              ]
+            }
+          },
+          {
+            dayNumber: "03",
+            date: "2027-01-06",
+            shortDay: "Wed",
+            shortDate: "06 Jan",
+            fullLabel: "Wednesday, 06 January 2027",
+            sessionsBySlot: {
+              makeup: [
+                { courseKey: "ATDM Gr.1", room: "Room TBA" },
+                { courseKey: "GPB Gr.1", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.1", room: "Room TBA" },
+                { courseKey: "BDA", room: "Room TBA" },
+                { courseKey: "Su-M", room: "Room TBA" }
+              ],
+              slot1a: [
+                { courseKey: "ATDM Gr.1", room: "Room TBA" },
+                { courseKey: "GPB Gr.1", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.1", room: "Room TBA" },
+                { courseKey: "BDA", room: "Room TBA" },
+                { courseKey: "Su-M", room: "Room TBA" }
+              ],
+              slot1b: [
+                { courseKey: "IEGS", room: "Room TBA" },
+                { courseKey: "RESD", room: "Room TBA" },
+                { courseKey: "BMSI", room: "Room TBA" }
+              ],
+              slot2a: [
+                { courseKey: "IEGS", room: "Room TBA" },
+                { courseKey: "RESD", room: "Room TBA" },
+                { courseKey: "BMSI", room: "Room TBA" }
+              ],
+              slot2b: [
+                { courseKey: "ATDM Gr.2", room: "Room TBA" },
+                { courseKey: "GPB Gr.2", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.2", room: "Room TBA" },
+                { courseKey: "ADPRM", room: "Room TBA" }
+              ],
+              slot3a: [
+                { courseKey: "ATDM Gr.2", room: "Room TBA" },
+                { courseKey: "GPB Gr.2", room: "Room TBA" },
+                { courseKey: "GEN-AI Gr.2", room: "Room TBA" },
+                { courseKey: "ADPRM", room: "Room TBA" }
+              ]
+            }
+          },
+          {
+            dayNumber: "04",
+            date: "2027-01-07",
+            shortDay: "Thu",
+            shortDate: "07 Jan",
+            fullLabel: "Thursday, 07 January 2027",
+            sessionsBySlot: {
+              slot1a: [
+                { courseKey: "PS-MS Gr.1", room: "Room TBA" },
+                { courseKey: "MDT-AI", room: "Room TBA" }
+              ],
+              slot1b: [
+                { courseKey: "PS-MS Gr.1", room: "Room TBA" },
+                { courseKey: "MDT-AI", room: "Room TBA" }
+              ],
+              slot2a: [
+                { courseKey: "ALT", room: "Room TBA" },
+                { courseKey: "FTSM", room: "Room TBA" },
+                { courseKey: "EMTG", room: "Room TBA" },
+                { courseKey: "FFI", room: "Room TBA" },
+                { courseKey: "NUTS", room: "Room TBA" }
+              ],
+              slot2b: [
+                { courseKey: "ALT", room: "Room TBA" },
+                { courseKey: "FTSM", room: "Room TBA" },
+                { courseKey: "EMTG", room: "Room TBA" },
+                { courseKey: "FFI", room: "Room TBA" },
+                { courseKey: "NUTS", room: "Room TBA" }
+              ],
+              slot3a: [
+                { courseKey: "PS-MS Gr.2", room: "Room TBA" },
+                { courseKey: "MIBR", room: "Room TBA" }
+              ],
+              slot3b: [
+                { courseKey: "PS-MS Gr.2", room: "Room TBA" },
+                { courseKey: "MIBR", room: "Room TBA" }
+              ]
+            }
+          },
+          {
+            dayNumber: "05",
+            date: "2027-01-08",
+            shortDay: "Fri",
+            shortDate: "08 Jan",
+            fullLabel: "Friday, 08 January 2027",
+            sessionsBySlot: {
+              slot1a: [
+                { courseKey: "PS-MS Gr.1", room: "Room TBA" },
+                { courseKey: "MDT-AI", room: "Room TBA" }
+              ],
+              slot1b: [
+                { courseKey: "PS-MS Gr.1", room: "Room TBA" },
+                { courseKey: "MDT-AI", room: "Room TBA" }
+              ],
+              slot2a: [
+                { courseKey: "ALT", room: "Room TBA" },
+                { courseKey: "FTSM", room: "Room TBA" },
+                { courseKey: "EMTG", room: "Room TBA" },
+                { courseKey: "FFI", room: "Room TBA" },
+                { courseKey: "NUTS", room: "Room TBA" }
+              ],
+              slot2b: [
+                { courseKey: "ALT", room: "Room TBA" },
+                { courseKey: "FTSM", room: "Room TBA" },
+                { courseKey: "EMTG", room: "Room TBA" },
+                { courseKey: "FFI", room: "Room TBA" },
+                { courseKey: "NUTS", room: "Room TBA" }
+              ],
+              slot3a: [
+                { courseKey: "PS-MS Gr.2", room: "Room TBA" },
+                { courseKey: "MIBR", room: "Room TBA" }
+              ],
+              slot3b: [
+                { courseKey: "PS-MS Gr.2", room: "Room TBA" },
+                { courseKey: "MIBR", room: "Room TBA" }
+              ]
+            }
+          },
+          {
+            dayNumber: "06",
+            date: "2027-01-09",
+            shortDay: "Sat",
+            shortDate: "09 Jan",
+            fullLabel: "Saturday, 09 January 2027",
+            sessionsBySlot: {
+              slot1a: [
+                { courseKey: "PS-MS Gr.1", room: "Room TBA" },
+                { courseKey: "MDT-AI", room: "Room TBA" }
+              ],
+              slot1b: [
+                { courseKey: "PS-MS Gr.1", room: "Room TBA" },
+                { courseKey: "MDT-AI", room: "Room TBA" }
+              ],
+              slot2a: [
+                { courseKey: "ALT", room: "Room TBA" },
+                { courseKey: "FTSM", room: "Room TBA" },
+                { courseKey: "EMTG", room: "Room TBA" },
+                { courseKey: "FFI", room: "Room TBA" },
+                { courseKey: "NUTS", room: "Room TBA" }
+              ],
+              slot2b: [
+                { courseKey: "ALT", room: "Room TBA" },
+                { courseKey: "FTSM", room: "Room TBA" },
+                { courseKey: "EMTG", room: "Room TBA" },
+                { courseKey: "FFI", room: "Room TBA" },
+                { courseKey: "NUTS", room: "Room TBA" }
+              ],
+              slot3a: [
+                { courseKey: "PS-MS Gr.2", room: "Room TBA" },
+                { courseKey: "MIBR", room: "Room TBA" }
+              ],
+              slot3b: [
+                { courseKey: "PS-MS Gr.2", room: "Room TBA" },
+                { courseKey: "MIBR", room: "Room TBA" }
+              ]
+            }
+          },
+          {
+            dayNumber: "07",
+            date: "2027-01-10",
+            shortDay: "Sun",
+            shortDate: "10 Jan",
+            fullLabel: "Sunday, 10 January 2027",
+            specialDay: {
+              title: "End Term Exam",
+              timeLabel: "Timing TBA",
+              room: "IIM Tiruchirappalli"
+            },
+            sessionsBySlot: {}
+          }
+        ],
+
+        team: {
+          chair: {
+            role: "Chair",
+            name: "Prof. Sirish Kumar Gouda",
+            phone: "+91-431-250 5087",
+            emails: ["ir@iimtrichy.ac.in", "irsc@iimtrichy.ac.in"]
+          },
+          members: [
+            "Abhishek Yadav",
+            "Akshad Prabhu",
+            "Aditya Singh",
+            "Atharva Daulatkar",
+            "Sakshi Sharma",
+            "Charu Shambhavi",
+            "Vemula Shaashank Reddy",
+            "Mohammad Shahbaz Saleem",
+            "Vaani Aryaki",
+            "Nikhita JS",
+            "Yashi Bisht",
+            "Survi Agarwal",
+            "Vedant Zade",
+            "Yash Dantrey"
+          ]
+        }
+      };
+
+      /* ==========================================================================
+         Application Logic
+         ========================================================================== */
+      (function () {
+        const profMap = new Map(EVENT_DATA.professors.map((p) => [p.id, p]));
+        const allSessions = [];
+
+        EVENT_DATA.scheduleDays.forEach((day) => {
+          EVENT_DATA.slots.forEach((slot) => {
+            const entries = day.sessionsBySlot[slot.id] || [];
+            entries.forEach((entry) => {
+              const course = EVENT_DATA.courses[entry.courseKey];
+              const prof = course ? profMap.get(course.profId) : null;
+              if (!course || !prof) return;
+              allSessions.push({
+                dayNumber: day.dayNumber,
+                date: day.date,
+                shortDay: day.shortDay,
+                shortDate: day.shortDate,
+                fullDayLabel: day.fullLabel,
+                slotId: slot.id,
+                slotLabel: slot.label,
+                timeLabel: slot.timeLabel,
+                startMin: slot.startMin,
+                endMin: slot.endMin,
+                courseKey: entry.courseKey,
+                courseTitle: course.title,
+                profId: prof.id,
+                profName: prof.name,
+                room: entry.room || EVENT_DATA.event.venue
+              });
+            });
+          });
+        });
+
+        function getNowIST() {
+          const now = new Date();
+          const utcMs = now.getTime() + now.getTimezoneOffset() * 60000;
+          const ist = new Date(utcMs + 330 * 60000);
+          const yyyy = ist.getFullYear();
+          const mm = String(ist.getMonth() + 1).padStart(2, "0");
+          const dd = String(ist.getDate()).padStart(2, "0");
+          const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+          const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+          const hh = String(ist.getHours()).padStart(2, "0");
+          const min = String(ist.getMinutes()).padStart(2, "0");
+          return {
+            dateStr: `${yyyy}-${mm}-${dd}`,
+            minutes: ist.getHours() * 60 + ist.getMinutes(),
+            displayClock: `${days[ist.getDay()]}, ${dd} ${months[ist.getMonth()]} ${yyyy} · ${hh}:${min} IST`
+          };
+        }
+
+        function getSessionStatus(dateStr, startMin, endMin, nowIST) {
+          if (nowIST.dateStr < "2027-01-04") {
+            return { label: "Upcoming", cls: "status-upcoming" };
+          }
+          if (nowIST.dateStr > "2027-01-10") {
+            return { label: "Concluded", cls: "status-concluded" };
+          }
+          if (dateStr < nowIST.dateStr) {
+            return { label: "Concluded", cls: "status-concluded" };
+          }
+          if (dateStr > nowIST.dateStr) {
+            return { label: "Upcoming", cls: "status-upcoming" };
+          }
+          if (nowIST.minutes >= endMin) {
+            return { label: "Concluded", cls: "status-concluded" };
+          }
+          if (nowIST.minutes >= startMin && nowIST.minutes < endMin) {
+            return { label: "In session", cls: "status-in-session" };
+          }
+          return { label: "Upcoming", cls: "status-upcoming" };
+        }
+
+        function getNextUpcomingForTicker(nowIST) {
+          const next = allSessions.find((s) => {
+            if (s.date > nowIST.dateStr) return true;
+            if (s.date === nowIST.dateStr && s.startMin > nowIST.minutes) return true;
+            return false;
+          });
+          if (next) {
+            return `${next.shortDay.toUpperCase()} ${next.shortDate.toUpperCase()} · ${next.timeLabel} · ${next.courseTitle} (${next.courseKey}) · ${next.room}`;
+          }
+          if (nowIST.dateStr <= "2027-01-10") {
+            return "SUN 10 JAN · TIMING TBA · End Term Exam · IIM Tiruchirappalli";
+          }
+          return "International Week 2026–2027 sessions concluded · IIM Tiruchirappalli";
+        }
+
+        function getInitials(name) {
+          return name
+            .replace(/^Prof\.\s*/i, "")
+            .split(/\s+/)
+            .slice(0, 2)
+            .map((part) => part[0] || "")
+            .join("")
+            .toUpperCase();
+        }
+
+        function escapeHtml(str) {
+          return String(str)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+        }
+
+        const state = {
+          profSearch: "",
+          profDayFilter: "",
+          activeNav: "home",
+          modalProfId: null,
+          tickerPaused: false
+        };
+
+        const els = {
+          liveClock: document.getElementById("live-ist-clock"),
+          tickerBar: document.getElementById("ticker-bar"),
+          tickerTrack: document.getElementById("ticker-track"),
+          tickerToggle: document.getElementById("ticker-toggle"),
+          heroKicker: document.getElementById("hero-kicker"),
+          heroTitle: document.getElementById("hero-title"),
+          heroMeta: document.getElementById("hero-meta"),
+          heroWelcome: document.getElementById("hero-welcome"),
+          professorsSubtitle: document.getElementById("professors-subtitle"),
+          profSearch: document.getElementById("prof-search"),
+          profSearchClear: document.getElementById("prof-search-clear"),
+          profDayFilter: document.getElementById("prof-day-filter"),
+          profSummary: document.getElementById("prof-summary"),
+          profGrid: document.getElementById("prof-grid"),
+          chairBlock: document.getElementById("chair-block"),
+          teamGrid: document.getElementById("team-grid"),
+          footerColophon: document.getElementById("footer-colophon"),
+          desktopNavUnderline: document.getElementById("desktop-nav-underline"),
+          profModal: document.getElementById("prof-modal"),
+          modalClose: document.getElementById("modal-close"),
+          modalAvatarWrap: document.getElementById("modal-avatar-wrap"),
+          modalProfName: document.getElementById("modal-prof-name"),
+          modalProfDesignation: document.getElementById("modal-prof-designation"),
+          modalProfAffiliation: document.getElementById("modal-prof-affiliation"),
+          modalProfBio: document.getElementById("modal-prof-bio"),
+          modalSessionsTitle: document.getElementById("modal-sessions-title"),
+          modalBoard: document.getElementById("modal-board")
+        };
+
+        function updateClockAndTicker() {
+          const nowIST = getNowIST();
+          els.liveClock.textContent = nowIST.displayClock;
+          const nextText = getNextUpcomingForTicker(nowIST);
+          const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (state.tickerPaused || prefersReduced) {
+            els.tickerTrack.textContent = nextText;
+          } else {
+            els.tickerTrack.textContent = `${nextText}     ·     ${nextText}     ·     `;
+          }
+        }
+
+        const desktopHeader = document.getElementById("desktop-header");
+
+        function updateHeaderScrollState() {
+          if (!desktopHeader) return;
+          desktopHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+        }
+
+        function renderStaticSections() {
+          els.heroKicker.textContent = EVENT_DATA.event.organiser;
+          els.heroTitle.innerHTML = escapeHtml(EVENT_DATA.event.name).replace(/\s+(\d{4}\s*[–-]\s*\d{4})/, "<br />$1");
+          els.heroMeta.textContent = `${EVENT_DATA.event.datesLabel} · ${EVENT_DATA.event.venue} · ${EVENT_DATA.event.teachingWindow}`;
+          els.heroWelcome.textContent = EVENT_DATA.event.welcome;
+          els.professorsSubtitle.textContent = `${EVENT_DATA.professors.length} visiting faculty · Select any pass to view their teaching schedule`;
+
+          const dayOpts = EVENT_DATA.scheduleDays
+            .filter((d) => !d.specialDay)
+            .map((d) => `<option value="${escapeHtml(d.date)}">Day ${escapeHtml(d.dayNumber)} · ${escapeHtml(d.shortDay)} ${escapeHtml(d.shortDate)}</option>`)
+            .join("");
+          els.profDayFilter.insertAdjacentHTML("beforeend", dayOpts);
+
+          const chair = EVENT_DATA.team.chair;
+          const emailLinks = chair.emails
+            .map((em) => `<a href="mailto:${escapeHtml(em)}">${escapeHtml(em)}</a>`)
+            .join(" ; ");
+          els.chairBlock.innerHTML = `
+            <p class="chair-label">${escapeHtml(chair.role)}</p>
+            <p class="chair-name">${escapeHtml(chair.name)}</p>
+            <p class="chair-contact">
+              <span>Phone: <a href="tel:${escapeHtml(chair.phone.replace(/[^+\d]/g, ""))}">${escapeHtml(chair.phone)}</a></span>
+              <span>Email: ${emailLinks}</span>
+            </p>
+          `;
+
+          els.teamGrid.innerHTML = EVENT_DATA.team.members
+            .map((member) => `<li class="team-member">${escapeHtml(member)}</li>`)
+            .join("");
+
+          els.footerColophon.textContent = `${EVENT_DATA.event.organiser} · ${EVENT_DATA.event.institution} · ${EVENT_DATA.event.name}`;
+        }
+
+        function renderProfessors() {
+          const q = state.profSearch.trim().toLowerCase();
+          els.profSearchClear.hidden = !q;
+
+          const filtered = EVENT_DATA.professors.filter((p) => {
+            if (state.profDayFilter) {
+              const teachesOnDay = allSessions.some((s) => s.profId === p.id && s.date === state.profDayFilter);
+              if (!teachesOnDay) return false;
+            }
+            if (!q) return true;
+            const courseText = p.courses.map((c) => `${c.code} ${c.title}`).join(" ");
+            return `${p.name} ${p.designation} ${p.institution} ${p.country} ${p.isoCode} ${p.domain} ${courseText}`
+              .toLowerCase()
+              .includes(q);
+          });
+
+          els.profSummary.textContent = `Showing ${filtered.length} of ${EVENT_DATA.professors.length}`;
+
+          if (!filtered.length) {
+            els.profGrid.innerHTML = `
+              <div class="empty-state" style="grid-column: 1 / -1;">
+                <p>No visiting faculty match your current search or day filter.</p>
+                <button class="btn btn-primary" type="button" id="prof-empty-reset">Reset Filters</button>
+              </div>
+            `;
+            const btn = document.getElementById("prof-empty-reset");
+            if (btn) {
+              btn.addEventListener("click", () => {
+                state.profSearch = "";
+                state.profDayFilter = "";
+                els.profSearch.value = "";
+                els.profDayFilter.value = "";
+                renderProfessors();
+              });
+            }
+            return;
+          }
+
+          els.profGrid.innerHTML = filtered
+            .map((p, idx) => {
+              const fromText =
+                p.country && p.isoCode
+                  ? `${p.institution} · ${p.country} (${p.isoCode})`
+                  : p.institution;
+              const coursesLine = p.courses.map((c) => `${c.title} (${c.code})`).join(" / ");
+              const profSessions = allSessions.filter((s) => s.profId === p.id);
+              const dayRange = Array.from(new Set(profSessions.map((s) => `${s.shortDay} ${s.shortDate}`))).join(", ");
+              const initials = getInitials(p.name);
+              const stagger = Math.min(idx * 35, 180);
+
+              return `
+                <button class="boarding-pass reveal is-visible" type="button" data-prof-id="${escapeHtml(p.id)}" style="transition-delay: ${stagger}ms;">
+                  <div>
+                    <div class="pass-header-strip">
+                      <span class="pass-header-title">Faculty Pass</span>
+                      <span class="pass-header-domain">${escapeHtml(p.domain)}</span>
+                    </div>
+
+                    <div class="pass-body">
+                      <div class="pass-person-row">
+                        <div class="prof-avatar-wrap">
+                          ${
+                            p.photo
+                              ? `<img class="prof-avatar" src="${escapeHtml(p.photo)}" alt="${escapeHtml(p.name)}" loading="lazy" width="56" height="56" onerror="this.outerHTML='<span class=\\'prof-avatar-fallback\\'>${escapeHtml(initials)}</span>'" />`
+                              : `<span class="prof-avatar-fallback">${escapeHtml(initials)}</span>`
+                          }
+                        </div>
+                        <div style="min-width: 0;">
+                          <span class="pass-field-label">Name</span>
+                          <h3 class="pass-name">${escapeHtml(p.name)}</h3>
+                        </div>
+                      </div>
+
+                      <div class="pass-fields">
+                        <div>
+                          <span class="pass-field-label">Designation</span>
+                          <p class="pass-value">${escapeHtml(p.designation)}</p>
+                        </div>
+                        <div>
+                          <span class="pass-field-label">From</span>
+                          <p class="pass-value pass-value-accent">${escapeHtml(fromText)}</p>
+                        </div>
+                        <div>
+                          <span class="pass-field-label">Session</span>
+                          <p class="pass-value">${escapeHtml(coursesLine)}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="pass-perforation" aria-hidden="true">
+                      <div class="pass-perforation-line"></div>
+                    </div>
+                    <div class="pass-stub">
+                      <div class="pass-stub-meta">
+                        <span class="pass-field-label">Venue</span>
+                        <span class="pass-stub-venue">${escapeHtml(EVENT_DATA.event.venue)} · ${profSessions.length} sessions</span>
+                        <span class="pass-stub-action">
+                          <span>View schedule (${escapeHtml(dayRange)})</span>
+                          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="pass-barcode" aria-hidden="true"></div>
+                    </div>
+                  </div>
+                </button>
+              `;
+            })
+            .join("");
+
+          els.profGrid.querySelectorAll(".boarding-pass").forEach((card) => {
+            card.addEventListener("click", () => openProfessorModal(card.getAttribute("data-prof-id")));
+          });
+        }
+
+        let lastFocusedEl = null;
+
+        function renderModalSessions(profId) {
+          const nowIST = getNowIST();
+          const profSessions = allSessions.filter((s) => s.profId === profId);
+          els.modalSessionsTitle.textContent = `Sessions Board (${profSessions.length})`;
+          els.modalBoard.innerHTML = profSessions
+            .map((s, idx) => {
+              const status = getSessionStatus(s.date, s.startMin, s.endMin, nowIST);
+              const delay = Math.min(idx * 40, 440);
+              return `
+                <div class="modal-board-row">
+                  <div class="modal-board-when flap-cell" style="--flap-delay: ${delay}ms;">${escapeHtml(s.shortDay)} ${escapeHtml(s.shortDate)} · ${escapeHtml(s.timeLabel)}</div>
+                  <div class="modal-board-status ${status.cls} flap-cell" style="--flap-delay: ${delay}ms;">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span>${escapeHtml(status.label)}</span>
+                  </div>
+                  <div class="modal-board-course">${escapeHtml(s.courseTitle)} (${escapeHtml(s.courseKey)})</div>
+                  <div class="modal-board-venue">${escapeHtml(s.slotLabel)} · ${escapeHtml(s.room)}</div>
+                </div>
+              `;
+            })
+            .join("");
+        }
+
+        function openProfessorModal(profId) {
+          const prof = profMap.get(profId);
+          if (!prof) return;
+          lastFocusedEl = document.activeElement;
+          state.modalProfId = profId;
+
+          const initials = getInitials(prof.name);
+          els.modalAvatarWrap.innerHTML = prof.photo
+            ? `<img class="prof-avatar" src="${escapeHtml(prof.photo)}" alt="${escapeHtml(prof.name)}" width="56" height="56" onerror="this.outerHTML='<span class=\\'prof-avatar-fallback\\'>${escapeHtml(initials)}</span>'" />`
+            : `<span class="prof-avatar-fallback">${escapeHtml(initials)}</span>`;
+
+          els.modalProfName.textContent = prof.name;
+          els.modalProfDesignation.textContent = `${prof.designation} · ${prof.domain}`;
+          els.modalProfAffiliation.textContent =
+            prof.country && prof.isoCode
+              ? `${prof.institution} · ${prof.country} (${prof.isoCode})`
+              : prof.institution;
+          els.modalProfBio.textContent = prof.bio;
+
+          renderModalSessions(profId);
+
+          const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          els.modalBoard.classList.remove("is-flipping");
+          els.profModal.hidden = false;
+          requestAnimationFrame(() => {
+            els.profModal.classList.add("is-open");
+            if (!prefersReduced) els.modalBoard.classList.add("is-flipping");
+            els.modalClose.focus();
+          });
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeProfessorModal() {
+          state.modalProfId = null;
+          els.profModal.classList.remove("is-open");
+          document.body.style.overflow = "";
+          window.setTimeout(() => {
+            if (!els.profModal.classList.contains("is-open")) els.profModal.hidden = true;
+          }, 220);
+          if (lastFocusedEl && typeof lastFocusedEl.focus === "function") lastFocusedEl.focus();
+        }
+
+        function updateNavIndicator(activeId) {
+          state.activeNav = activeId;
+          document.querySelectorAll("[data-nav]").forEach((link) => {
+            link.classList.toggle("is-active", link.getAttribute("data-nav") === activeId);
+          });
+          const activeDesktopLink = document.querySelector(`.desktop-nav-link[data-nav="${activeId}"]`);
+          const underline = els.desktopNavUnderline;
+          if (activeDesktopLink && underline) {
+            const navRect = activeDesktopLink.parentElement.getBoundingClientRect();
+            const linkRect = activeDesktopLink.getBoundingClientRect();
+            if (linkRect.width > 0) {
+              underline.style.opacity = "1";
+              underline.style.transform = `translateX(${linkRect.left - navRect.left}px) scaleX(${linkRect.width / 40})`;
+            }
+          }
+        }
+
+        function setupScrollObservers() {
+          const sections = ["home", "professors", "team"].map((id) => document.getElementById(id)).filter(Boolean);
+          if ("IntersectionObserver" in window) {
+            const navObserver = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) updateNavIndicator(entry.target.id);
+                });
+              },
+              { rootMargin: "-35% 0px -50% 0px", threshold: 0 }
+            );
+            sections.forEach((sec) => navObserver.observe(sec));
+
+            const revealObserver = new IntersectionObserver(
+              (entries, obs) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    obs.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.08 }
+            );
+            document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+          } else {
+            document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+          }
+        }
+
+        function bindEvents() {
+          els.tickerToggle.addEventListener("click", () => {
+            state.tickerPaused = !state.tickerPaused;
+            els.tickerBar.classList.toggle("is-paused", state.tickerPaused);
+            els.tickerToggle.setAttribute("aria-pressed", state.tickerPaused ? "true" : "false");
+            els.tickerToggle.setAttribute("aria-label", state.tickerPaused ? "Resume session ticker" : "Pause session ticker");
+            els.tickerToggle.textContent = state.tickerPaused ? "Resume" : "Pause";
+            updateClockAndTicker();
+          });
+
+          els.profSearch.addEventListener("input", (e) => {
+            state.profSearch = e.target.value;
+            renderProfessors();
+          });
+          els.profSearchClear.addEventListener("click", () => {
+            state.profSearch = "";
+            els.profSearch.value = "";
+            els.profSearch.focus();
+            renderProfessors();
+          });
+          els.profDayFilter.addEventListener("change", (e) => {
+            state.profDayFilter = e.target.value;
+            renderProfessors();
+          });
+
+          els.modalClose.addEventListener("click", closeProfessorModal);
+          els.profModal.addEventListener("click", (e) => {
+            if (e.target === els.profModal) closeProfessorModal();
+          });
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !els.profModal.hidden) closeProfessorModal();
+          });
+
+          document.querySelectorAll("[data-nav]").forEach((link) => {
+            link.addEventListener("click", () => updateNavIndicator(link.getAttribute("data-nav")));
+          });
+          window.addEventListener("scroll", updateHeaderScrollState, { passive: true });
+          window.addEventListener("resize", () => updateNavIndicator(state.activeNav));
+
+          // Update IST clock, ticker, and open professor modal status every 60 seconds
+          window.setInterval(() => {
+            updateClockAndTicker();
+            if (state.modalProfId && !els.profModal.hidden) {
+              renderModalSessions(state.modalProfId);
+            }
+          }, 60000);
+        }
+
+        renderStaticSections();
+        updateClockAndTicker();
+        renderProfessors();
+        bindEvents();
+        updateHeaderScrollState();
+        setupScrollObservers();
+        requestAnimationFrame(() => updateNavIndicator("home"));
+      })();
+    </script>
+  </body>
+</html>
+```
