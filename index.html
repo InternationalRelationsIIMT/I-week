@@ -860,26 +860,153 @@
         white-space: nowrap;
       }
 
-      .prof-exam-note {
-        margin-top: 18px;
-        padding: 12px 16px;
-        border-radius: var(--radius-sm);
-        background: var(--color-board);
-        border: 1px solid var(--color-border);
-        font-family: var(--font-board);
-        font-size: 0.9375rem;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: var(--color-text-muted);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 8px 16px;
+      /* ==========================================================================
+         Contrasting Academic Announcement Strip & Timetable Downloads
+         ========================================================================== */
+      .academic-announcement-band {
+        background: #eef0fa;
+        color: #0b0c12;
+        border-top: 3px solid var(--color-primary);
+        border-bottom: 1px solid #c7cce5;
+        padding: 20px 0;
       }
 
-      .prof-exam-note strong {
-        color: var(--color-text);
+      .announcement-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        align-items: center;
+      }
+
+      @media (min-width: 900px) {
+        .announcement-grid {
+          grid-template-columns: 1.15fr 1fr auto;
+          gap: 24px;
+        }
+      }
+
+      .announcement-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      @media (min-width: 900px) {
+        .announcement-item + .announcement-item {
+          padding-left: 24px;
+          border-left: 1px solid #c7cce5;
+        }
+      }
+
+      .announcement-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 9px;
+        border-radius: 4px;
+        background: var(--color-secondary);
+        color: #ffffff;
+        font-family: var(--font-board);
+        font-size: 0.75rem;
         font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .announcement-badge-exam {
+        background: var(--color-primary);
+      }
+
+      .announcement-headline {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 1.0625rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #0b0c12;
+      }
+
+      .announcement-sub {
+        margin: 0;
+        font-family: var(--font-board);
+        font-size: 0.9375rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #353954;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .announcement-downloads {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      @media (min-width: 900px) {
+        .announcement-downloads {
+          padding-left: 24px;
+          border-left: 1px solid #c7cce5;
+        }
+      }
+
+      .announcement-download-label {
+        margin: 0;
+        font-family: var(--font-board);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #353954;
+      }
+
+      .announcement-btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .btn-download {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 44px;
+        padding: 9px 15px;
+        border-radius: var(--radius-sm);
+        border: 1px solid transparent;
+        font-family: var(--font-board);
+        font-size: 0.9375rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: transform 160ms var(--ease-out), opacity 160ms var(--ease-out), background-color 160ms var(--ease-out);
+      }
+
+      .btn-download:active {
+        transform: scale(0.98);
+      }
+
+      .btn-download-pdf {
+        background: #0b0c12;
+        color: #ffffff;
+      }
+
+      .btn-download-pdf:hover {
+        background: #1a1d2d;
+        transform: translateY(-1px);
+      }
+
+      .btn-download-xlsx {
+        background: var(--color-primary);
+        color: #ffffff;
+      }
+
+      .btn-download-xlsx:hover {
+        background: var(--color-primary-bright);
+        transform: translateY(-1px);
       }
 
       /* Departures-Style Session Board inside Faculty Modal */
@@ -1629,6 +1756,41 @@
         </div>
       </section>
 
+      <!-- Contrasting Academic Dates & Timetable Download Strip -->
+      <section class="academic-announcement-band" aria-label="Academic schedule dates and timetable downloads">
+        <div class="container announcement-grid">
+          <div class="announcement-item">
+            <span class="announcement-badge">Teaching Schedule</span>
+            <p class="announcement-headline">Monday, 04 Jan – Saturday, 09 Jan 2027</p>
+            <p class="announcement-sub">Make-up &amp; Slots 1–3 · 07:30 – 21:15 IST</p>
+          </div>
+
+          <div class="announcement-item">
+            <span class="announcement-badge announcement-badge-exam">End-Term Exam</span>
+            <p class="announcement-headline">Sunday, 10 January 2027</p>
+            <p class="announcement-sub">Timing TBA · IIM Tiruchirappalli</p>
+          </div>
+
+          <div class="announcement-downloads">
+            <p class="announcement-download-label">Complete Timetable</p>
+            <div class="announcement-btn-row">
+              <button class="btn-download btn-download-pdf" id="download-pdf-btn" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                </svg>
+                <span>Download PDF</span>
+              </button>
+              <button class="btn-download btn-download-xlsx" id="download-xlsx-btn" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                </svg>
+                <span>Download Excel</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 2. Faculty & Session Schedules -->
       <section class="section" id="professors" aria-labelledby="professors-heading">
         <div class="container">
@@ -1658,8 +1820,8 @@
                 id="prof-search"
                 class="input input-search"
                 type="search"
-                placeholder="Search professor, institution, country, or session"
-                aria-label="Search visiting faculty"
+                placeholder="Search name, course code (e.g. MDTAI), date (e.g. 04 Jan), or country"
+                aria-label="Search visiting faculty by name, course code, date, institution, or country"
               />
               <button
                 id="prof-search-clear"
@@ -1682,11 +1844,6 @@
           </div>
 
           <div class="prof-grid" id="prof-grid"></div>
-
-          <div class="prof-exam-note">
-            <span><strong>End Term Exam</strong> · Sunday, 10 January 2027</span>
-            <span>Timing TBA · IIM Tiruchirappalli</span>
-          </div>
         </div>
       </section>
     </main>
@@ -2541,20 +2698,103 @@
           els.footerColophon.textContent = `${EVENT_DATA.event.organiser} · ${EVENT_DATA.event.institution} · ${EVENT_DATA.event.name}`;
         }
 
+        function normalizeAlnum(str) {
+          return String(str || "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]/g, "");
+        }
+
+        function stripOrdinals(str) {
+          return String(str || "")
+            .toLowerCase()
+            .replace(/\b(\d{1,2})(?:st|nd|rd|th)\b/g, "$1");
+        }
+
+        const WEEKDAY_FULL = {
+          mon: "Monday",
+          tue: "Tuesday",
+          wed: "Wednesday",
+          thu: "Thursday",
+          fri: "Friday",
+          sat: "Saturday",
+          sun: "Sunday"
+        };
+
+        const profSearchIndex = new Map();
+        EVENT_DATA.professors.forEach((p) => {
+          const profSessions = allSessions.filter((s) => s.profId === p.id);
+          const dateTokens = [];
+          const seenDates = new Set();
+          profSessions.forEach((s) => {
+            if (seenDates.has(s.date)) return;
+            seenDates.add(s.date);
+            const [, mm, dd] = s.date.split("-");
+            const dNum = String(Number(dd));
+            const mNum = String(Number(mm));
+            const fullDay = WEEKDAY_FULL[s.shortDay.toLowerCase()] || s.shortDay;
+            const dayIdx = String(Number(s.dayNumber));
+            dateTokens.push(
+              s.date,
+              s.fullDayLabel,
+              `${s.shortDay} ${s.shortDate}`,
+              `${fullDay} ${dNum} Jan`,
+              `${dd} Jan`,
+              `${dNum} Jan`,
+              `Jan ${dd}`,
+              `Jan ${dNum}`,
+              `${dd} January`,
+              `${dNum} January`,
+              `January ${dd}`,
+              `January ${dNum}`,
+              `${dd}/${mm}`,
+              `${dNum}/${mNum}`,
+              `${dd}-${mm}`,
+              `${dNum}-${mNum}`,
+              `${dd}/${mm}/2027`,
+              `Day ${s.dayNumber}`,
+              `Day ${dayIdx}`
+            );
+          });
+
+          const courseTokens = p.courses.map((c) => `${c.code} ${c.title}`);
+          const sessionCourseKeys = profSessions.map((s) => s.courseKey);
+          const rawCombined = [
+            p.name,
+            p.designation,
+            p.institution,
+            p.country,
+            p.isoCode,
+            p.domain,
+            ...courseTokens,
+            ...sessionCourseKeys,
+            ...dateTokens
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+
+          profSearchIndex.set(p.id, {
+            raw: rawCombined,
+            alnum: normalizeAlnum(rawCombined)
+          });
+        });
+
         function renderProfessors() {
-          const q = state.profSearch.trim().toLowerCase();
-          els.profSearchClear.hidden = !q;
+          const qRaw = state.profSearch.trim();
+          const qClean = stripOrdinals(qRaw);
+          const qAlnum = normalizeAlnum(qClean);
+          els.profSearchClear.hidden = !qRaw;
 
           const filtered = EVENT_DATA.professors.filter((p) => {
             if (state.profDayFilter) {
               const teachesOnDay = allSessions.some((s) => s.profId === p.id && s.date === state.profDayFilter);
               if (!teachesOnDay) return false;
             }
-            if (!q) return true;
-            const courseText = p.courses.map((c) => `${c.code} ${c.title}`).join(" ");
-            return `${p.name} ${p.designation} ${p.institution} ${p.country} ${p.isoCode} ${p.domain} ${courseText}`
-              .toLowerCase()
-              .includes(q);
+            if (!qClean) return true;
+            const idxEntry = profSearchIndex.get(p.id);
+            if (!idxEntry) return false;
+            if (idxEntry.raw.includes(qClean)) return true;
+            return qAlnum.length > 0 && idxEntry.alnum.includes(qAlnum);
           });
 
           els.profSummary.textContent = `Showing ${filtered.length} of ${EVENT_DATA.professors.length}`;
@@ -2773,7 +3013,474 @@
           }
         }
 
+        /* ========================================================================
+           Complete Timetable Exporters (Real .xlsx & .pdf in Pure Vanilla JS)
+           ======================================================================== */
+        function getExportTimetableRows() {
+          const rows = [];
+          EVENT_DATA.scheduleDays.forEach((day) => {
+            if (day.specialDay) {
+              rows.push({
+                dayLabel: `Day ${day.dayNumber}`,
+                dateLabel: `${day.shortDay}, ${day.shortDate} 2027`,
+                slotLabel: "Exam",
+                timeLabel: day.specialDay.timeLabel,
+                courseCode: "EXAM",
+                courseTitle: day.specialDay.title,
+                faculty: "All Visiting Courses",
+                affiliation: day.specialDay.room,
+                venue: day.specialDay.room,
+                isExam: true
+              });
+              return;
+            }
+            EVENT_DATA.slots.forEach((slot) => {
+              const entries = day.sessionsBySlot[slot.id] || [];
+              entries.forEach((entry) => {
+                const course = EVENT_DATA.courses[entry.courseKey];
+                const prof = course ? profMap.get(course.profId) : null;
+                if (!course || !prof) return;
+                rows.push({
+                  dayLabel: `Day ${day.dayNumber}`,
+                  dateLabel: `${day.shortDay}, ${day.shortDate} 2027`,
+                  slotLabel: slot.label,
+                  timeLabel: slot.timeLabel,
+                  courseCode: entry.courseKey,
+                  courseTitle: course.title,
+                  faculty: prof.name,
+                  affiliation: prof.country ? `${prof.institution}, ${prof.country}` : prof.institution,
+                  venue: entry.room || EVENT_DATA.event.venue,
+                  isExam: false
+                });
+              });
+            });
+          });
+          return rows;
+        }
+
+        function triggerBlobDownload(blob, filename) {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.setTimeout(() => URL.revokeObjectURL(url), 1500);
+        }
+
+        function xmlEscape(str) {
+          return String(str || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&apos;");
+        }
+
+        function excelColName(index) {
+          let name = "";
+          let n = index + 1;
+          while (n > 0) {
+            const rem = (n - 1) % 26;
+            name = String.fromCharCode(65 + rem) + name;
+            n = Math.floor((n - 1) / 26);
+          }
+          return name;
+        }
+
+        function buildXlsxWorksheetXml(rows, colWidths, freezeRow) {
+          const colsXml = colWidths
+            .map((w, i) => `<col min="${i + 1}" max="${i + 1}" width="${w}" customWidth="1"/>`)
+            .join("");
+          const sheetViewsXml = freezeRow
+            ? `<sheetViews><sheetView workbookViewId="0"><pane ySplit="${freezeRow}" topLeftCell="A${freezeRow + 1}" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>`
+            : "";
+          const rowsXml = rows
+            .map((row, rIdx) => {
+              const rNum = rIdx + 1;
+              const cellsXml = row.cells
+                .map((val, cIdx) => {
+                  const ref = `${excelColName(cIdx)}${rNum}`;
+                  const styleAttr = row.style !== undefined ? ` s="${row.style}"` : "";
+                  return `<c r="${ref}" t="inlineStr"${styleAttr}><is><t xml:space="preserve">${xmlEscape(val)}</t></is></c>`;
+                })
+                .join("");
+              const htAttr = row.height ? ` ht="${row.height}" customHeight="1"` : "";
+              return `<row r="${rNum}"${htAttr}>${cellsXml}</row>`;
+            })
+            .join("");
+          return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+            `<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">` +
+            sheetViewsXml +
+            `<cols>${colsXml}</cols>` +
+            `<sheetData>${rowsXml}</sheetData>` +
+            `</worksheet>`;
+        }
+
+        function crc32Bytes(bytes) {
+          let crc = 0xffffffff;
+          for (let i = 0; i < bytes.length; i++) {
+            crc ^= bytes[i];
+            for (let j = 0; j < 8; j++) {
+              crc = (crc >>> 1) ^ (crc & 1 ? 0xedb88320 : 0);
+            }
+          }
+          return (crc ^ 0xffffffff) >>> 0;
+        }
+
+        function createZipStore(files) {
+          const enc = new TextEncoder();
+          const localParts = [];
+          const centralParts = [];
+          let offset = 0;
+
+          files.forEach((file) => {
+            const nameBytes = enc.encode(file.name);
+            const dataBytes = enc.encode(file.content);
+            const crc = crc32Bytes(dataBytes);
+
+            const local = new Uint8Array(30 + nameBytes.length);
+            const lv = new DataView(local.buffer);
+            lv.setUint32(0, 0x04034b50, true);
+            lv.setUint16(4, 20, true);
+            lv.setUint16(6, 0x0800, true);
+            lv.setUint16(8, 0, true);
+            lv.setUint16(10, 0, true);
+            lv.setUint16(12, 0x5421, true);
+            lv.setUint32(14, crc, true);
+            lv.setUint32(18, dataBytes.length, true);
+            lv.setUint32(22, dataBytes.length, true);
+            lv.setUint16(26, nameBytes.length, true);
+            lv.setUint16(28, 0, true);
+            local.set(nameBytes, 30);
+
+            localParts.push(local, dataBytes);
+
+            const central = new Uint8Array(46 + nameBytes.length);
+            const cv = new DataView(central.buffer);
+            cv.setUint32(0, 0x02014b50, true);
+            cv.setUint16(4, 20, true);
+            cv.setUint16(6, 20, true);
+            cv.setUint16(8, 0x0800, true);
+            cv.setUint16(10, 0, true);
+            cv.setUint16(12, 0, true);
+            cv.setUint16(14, 0x5421, true);
+            cv.setUint32(16, crc, true);
+            cv.setUint32(20, dataBytes.length, true);
+            cv.setUint32(24, dataBytes.length, true);
+            cv.setUint16(28, nameBytes.length, true);
+            cv.setUint16(30, 0, true);
+            cv.setUint16(32, 0, true);
+            cv.setUint16(34, 0, true);
+            cv.setUint16(36, 0, true);
+            cv.setUint32(38, 0, true);
+            cv.setUint32(42, offset, true);
+            central.set(nameBytes, 46);
+
+            centralParts.push(central);
+            offset += local.length + dataBytes.length;
+          });
+
+          const centralSize = centralParts.reduce((acc, arr) => acc + arr.length, 0);
+          const eocd = new Uint8Array(22);
+          const ev = new DataView(eocd.buffer);
+          ev.setUint32(0, 0x06054b50, true);
+          ev.setUint16(4, 0, true);
+          ev.setUint16(6, 0, true);
+          ev.setUint16(8, files.length, true);
+          ev.setUint16(10, files.length, true);
+          ev.setUint32(12, centralSize, true);
+          ev.setUint32(16, offset, true);
+          ev.setUint16(20, 0, true);
+
+          return new Blob([...localParts, ...centralParts, eocd], {
+            type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          });
+        }
+
+        function buildTimetableXlsxBlob() {
+          const rows = getExportTimetableRows();
+          const sheet1Rows = [
+            { cells: [`${EVENT_DATA.event.institution} — ${EVENT_DATA.event.name}`], style: 1, height: 26 },
+            { cells: [`Teaching Schedule: 04–09 Jan 2027 (Mon–Sat) | End-Term Examination: Sunday, 10 Jan 2027 (Timing TBA)`], style: 3, height: 22 },
+            { cells: [], style: 0, height: 10 },
+            { cells: ["Day", "Date", "Slot", "Time (IST)", "Course Code", "Course Title", "Faculty", "Affiliation", "Venue"], style: 2, height: 24 },
+            ...rows.map((r) => ({
+              cells: [r.dayLabel, r.dateLabel, r.slotLabel, r.timeLabel, r.courseCode, r.courseTitle, r.faculty, r.affiliation, r.venue],
+              style: r.isExam ? 4 : 0
+            }))
+          ];
+
+          const sheet2Rows = [
+            { cells: [`Visiting Faculty Directory — ${EVENT_DATA.event.name}`], style: 1, height: 26 },
+            { cells: ["Faculty", "Designation", "Institution", "Country", "Domain", "Courses", "Teaching Dates"], style: 2, height: 24 },
+            ...EVENT_DATA.professors.map((p) => {
+              const profSessions = allSessions.filter((s) => s.profId === p.id);
+              const dates = Array.from(new Set(profSessions.map((s) => `${s.shortDay} ${s.shortDate}`))).join(", ");
+              const courses = p.courses.map((c) => `${c.title} (${c.code})`).join("; ");
+              return {
+                cells: [p.name, p.designation, p.institution, p.country || "—", p.domain, courses, dates],
+                style: 0
+              };
+            })
+          ];
+
+          const contentTypesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+            `<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">` +
+            `<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>` +
+            `<Default Extension="xml" ContentType="application/xml"/>` +
+            `<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>` +
+            `<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>` +
+            `<Override PartName="/xl/worksheets/sheet2.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>` +
+            `<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>` +
+            `</Types>`;
+
+          const rootRelsXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+            `<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">` +
+            `<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>` +
+            `</Relationships>`;
+
+          const workbookXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+            `<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">` +
+            `<sheets>` +
+            `<sheet name="Complete Timetable" sheetId="1" r:id="rId1"/>` +
+            `<sheet name="Visiting Faculty" sheetId="2" r:id="rId2"/>` +
+            `</sheets>` +
+            `</workbook>`;
+
+          const workbookRelsXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+            `<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">` +
+            `<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>` +
+            `<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet2.xml"/>` +
+            `<Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>` +
+            `</Relationships>`;
+
+          const stylesXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+            `<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">` +
+            `<fonts count="4">` +
+            `<font><sz val="11"/><color rgb="FF0B0C12"/><name val="Calibri"/></font>` +
+            `<font><b/><sz val="13"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>` +
+            `<font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>` +
+            `<font><b/><sz val="10"/><color rgb="FF1A1654"/><name val="Calibri"/></font>` +
+            `</fonts>` +
+            `<fills count="6">` +
+            `<fill><patternFill patternType="none"/></fill>` +
+            `<fill><patternFill patternType="gray125"/></fill>` +
+            `<fill><patternFill patternType="solid"><fgColor rgb="FF1A1654"/></patternFill></fill>` +
+            `<fill><patternFill patternType="solid"><fgColor rgb="FF2D1EE8"/></patternFill></fill>` +
+            `<fill><patternFill patternType="solid"><fgColor rgb="FFEEF0FA"/></patternFill></fill>` +
+            `<fill><patternFill patternType="solid"><fgColor rgb="FFFFF3D6"/></patternFill></fill>` +
+            `</fills>` +
+            `<borders count="2">` +
+            `<border><left/><right/><top/><bottom/><diagonal/></border>` +
+            `<border><left style="thin"><color rgb="FFD2D6EA"/></left><right style="thin"><color rgb="FFD2D6EA"/></right><top style="thin"><color rgb="FFD2D6EA"/></top><bottom style="thin"><color rgb="FFD2D6EA"/></bottom></border>` +
+            `</borders>` +
+            `<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>` +
+            `<cellXfs count="5">` +
+            `<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>` +
+            `<xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1"><alignment vertical="center"/></xf>` +
+            `<xf numFmtId="0" fontId="2" fillId="3" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf>` +
+            `<xf numFmtId="0" fontId="3" fillId="4" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1"><alignment vertical="center"/></xf>` +
+            `<xf numFmtId="0" fontId="3" fillId="5" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center" wrapText="1"/></xf>` +
+            `</cellXfs>` +
+            `</styleSheet>`;
+
+          return createZipStore([
+            { name: "[Content_Types].xml", content: contentTypesXml },
+            { name: "_rels/.rels", content: rootRelsXml },
+            { name: "xl/workbook.xml", content: workbookXml },
+            { name: "xl/_rels/workbook.xml.rels", content: workbookRelsXml },
+            { name: "xl/styles.xml", content: stylesXml },
+            { name: "xl/worksheets/sheet1.xml", content: buildXlsxWorksheetXml(sheet1Rows, [10, 20, 12, 20, 15, 48, 28, 36, 16], 4) },
+            { name: "xl/worksheets/sheet2.xml", content: buildXlsxWorksheetXml(sheet2Rows, [28, 30, 38, 16, 26, 48, 30], 2) }
+          ]);
+        }
+
+        function pdfSafeText(str) {
+          return String(str || "")
+            .replace(/[–—]/g, "-")
+            .replace(/·/g, "|")
+            .replace(/[’‘]/g, "'")
+            .replace(/[“”]/g, '"')
+            .replace(/®/g, "(R)")
+            .replace(/[^\x20-\x7E]/g, " ");
+        }
+
+        function pdfEscape(str) {
+          return pdfSafeText(str)
+            .replace(/\\/g, "\\\\")
+            .replace(/\(/g, "\\(")
+            .replace(/\)/g, "\\)");
+        }
+
+        function wrapPdfText(text, maxChars) {
+          const clean = pdfSafeText(text).trim();
+          if (!clean) return [""];
+          const words = clean.split(/\s+/);
+          const lines = [];
+          let current = "";
+          words.forEach((word) => {
+            if (!current) {
+              current = word;
+            } else if ((current + " " + word).length <= maxChars) {
+              current += " " + word;
+            } else {
+              lines.push(current);
+              current = word;
+            }
+          });
+          if (current) lines.push(current);
+          return lines;
+        }
+
+        function buildTimetablePdfBlob() {
+          const pageW = 841.89;
+          const pageH = 595.28;
+          const marginX = 32;
+          const cols = [
+            { header: "DATE", width: 96, maxChars: 16 },
+            { header: "SLOT & TIME (IST)", width: 132, maxChars: 24 },
+            { header: "CODE", width: 78, maxChars: 12 },
+            { header: "COURSE TITLE", width: 258, maxChars: 49 },
+            { header: "FACULTY", width: 145, maxChars: 26 },
+            { header: "VENUE", width: 68.89, maxChars: 11 }
+          ];
+          const tableW = cols.reduce((s, c) => s + c.width, 0);
+          const rows = getExportTimetableRows();
+
+          const pagesStreams = [];
+          let cmds = [];
+          let cursorY = pageH;
+          const bottomLimit = 44;
+
+          function drawBannerAndTableHead(isFirstPage) {
+            cmds = [];
+            if (isFirstPage) {
+              cmds.push(`0.102 0.086 0.329 rg ${marginX} ${pageH - 74} ${tableW} 44 re f`);
+              cmds.push(`BT /F2 13 Tf 1 1 1 rg ${marginX + 12} ${pageH - 49} Td (${pdfEscape("INDIAN INSTITUTE OF MANAGEMENT TIRUCHIRAPPALLI")}) Tj ET`);
+              cmds.push(`BT /F1 10 Tf 0.84 0.85 1 rg ${marginX + 12} ${pageH - 64} Td (${pdfEscape("International Week 2026-2027 | Complete Timetable")}) Tj ET`);
+              cmds.push(`0.933 0.941 0.980 rg ${marginX} ${pageH - 98} ${tableW} 20 re f`);
+              cmds.push(`BT /F2 8.5 Tf 0.043 0.047 0.071 rg ${marginX + 12} ${pageH - 91} Td (${pdfEscape("Teaching Schedule: 04-09 Jan 2027 (Mon-Sat)   |   End-Term Exam: Sunday, 10 January 2027 (Timing TBA)")}) Tj ET`);
+              cursorY = pageH - 108;
+            } else {
+              cmds.push(`BT /F2 10 Tf 0.102 0.086 0.329 rg ${marginX} ${pageH - 36} Td (${pdfEscape("IIM Tiruchirappalli | International Week 2026-2027 - Complete Timetable (continued)")}) Tj ET`);
+              cursorY = pageH - 48;
+            }
+
+            const thH = 22;
+            cmds.push(`0.176 0.118 0.910 rg ${marginX} ${cursorY - thH} ${tableW} ${thH} re f`);
+            let x = marginX;
+            cols.forEach((col) => {
+              cmds.push(`BT /F2 8.5 Tf 1 1 1 rg ${x + 6} ${cursorY - 14} Td (${pdfEscape(col.header)}) Tj ET`);
+              x += col.width;
+            });
+            cursorY -= thH;
+          }
+
+          drawBannerAndTableHead(true);
+
+          rows.forEach((r, idx) => {
+            const cellValues = [
+              r.dateLabel,
+              `${r.slotLabel} | ${r.timeLabel}`,
+              r.courseCode,
+              r.courseTitle,
+              r.faculty,
+              r.venue
+            ];
+            const wrapped = cellValues.map((val, cIdx) => wrapPdfText(val, cols[cIdx].maxChars));
+            const maxLines = Math.max(...wrapped.map((lines) => lines.length));
+            const rowH = Math.max(18, maxLines * 10.5 + 8);
+
+            if (cursorY - rowH < bottomLimit) {
+              pagesStreams.push(cmds);
+              drawBannerAndTableHead(false);
+            }
+
+            if (r.isExam) {
+              cmds.push(`1 0.953 0.839 rg ${marginX} ${cursorY - rowH} ${tableW} ${rowH} re f`);
+            } else if (idx % 2 === 1) {
+              cmds.push(`0.961 0.965 0.988 rg ${marginX} ${cursorY - rowH} ${tableW} ${rowH} re f`);
+            }
+            cmds.push(`0.82 0.84 0.91 RG 0.4 w ${marginX} ${cursorY - rowH} ${tableW} ${rowH} re S`);
+
+            let x = marginX;
+            wrapped.forEach((lines, cIdx) => {
+              const fontRef = r.isExam || cIdx === 2 ? "/F2" : "/F1";
+              lines.forEach((line, lIdx) => {
+                const textY = cursorY - 12 - lIdx * 10.5;
+                cmds.push(`BT ${fontRef} 8.2 Tf 0.043 0.047 0.071 rg ${x + 6} ${textY.toFixed(2)} Td (${pdfEscape(line)}) Tj ET`);
+              });
+              x += cols[cIdx].width;
+            });
+
+            cursorY -= rowH;
+          });
+
+          pagesStreams.push(cmds);
+
+          const totalPages = pagesStreams.length;
+          const objects = [];
+          const pageIds = [];
+          let nextId = 5;
+
+          pagesStreams.forEach((streamCmds, pIdx) => {
+            const footerCmd = `BT /F1 8 Tf 0.35 0.37 0.48 rg ${marginX} 22 Td (${pdfEscape("International Relations Students Committee | IIM Tiruchirappalli")}) Tj ET`;
+            const pageNumCmd = `BT /F1 8 Tf 0.35 0.37 0.48 rg ${marginX + tableW - 56} 22 Td (${pdfEscape(`Page ${pIdx + 1} of ${totalPages}`)}) Tj ET`;
+            const streamStr = [...streamCmds, footerCmd, pageNumCmd].join("\n");
+            const pageId = nextId++;
+            const contentId = nextId++;
+            pageIds.push(pageId);
+            objects.push({
+              id: pageId,
+              body: `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageW} ${pageH}] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents ${contentId} 0 R >>`
+            });
+            objects.push({
+              id: contentId,
+              body: `<< /Length ${streamStr.length} >>\nstream\n${streamStr}\nendstream`
+            });
+          });
+
+          const allObjects = [
+            { id: 1, body: `<< /Type /Catalog /Pages 2 0 R >>` },
+            { id: 2, body: `<< /Type /Pages /Kids [${pageIds.map((id) => `${id} 0 R`).join(" ")}] /Count ${totalPages} >>` },
+            { id: 3, body: `<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>` },
+            { id: 4, body: `<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>` },
+            ...objects
+          ].sort((a, b) => a.id - b.id);
+
+          let pdf = "%PDF-1.4\n";
+          const offsets = [0];
+          allObjects.forEach((obj) => {
+            offsets[obj.id] = pdf.length;
+            pdf += `${obj.id} 0 obj\n${obj.body}\nendobj\n`;
+          });
+          const xrefStart = pdf.length;
+          pdf += `xref\n0 ${allObjects.length + 1}\n`;
+          pdf += `0000000000 65535 f \n`;
+          for (let i = 1; i <= allObjects.length; i++) {
+            pdf += `${String(offsets[i]).padStart(10, "0")} 00000 n \n`;
+          }
+          pdf += `trailer\n<< /Size ${allObjects.length + 1} /Root 1 0 R >>\nstartxref\n${xrefStart}\n%%EOF`;
+
+          return new Blob([pdf], { type: "application/pdf" });
+        }
+
         function bindEvents() {
+          const pdfBtn = document.getElementById("download-pdf-btn");
+          const xlsxBtn = document.getElementById("download-xlsx-btn");
+          if (pdfBtn) {
+            pdfBtn.addEventListener("click", () => {
+              triggerBlobDownload(buildTimetablePdfBlob(), "International-Week-2026-2027-Timetable.pdf");
+            });
+          }
+          if (xlsxBtn) {
+            xlsxBtn.addEventListener("click", () => {
+              triggerBlobDownload(buildTimetableXlsxBlob(), "International-Week-2026-2027-Timetable.xlsx");
+            });
+          }
+
           els.tickerToggle.addEventListener("click", () => {
             state.tickerPaused = !state.tickerPaused;
             els.tickerBar.classList.toggle("is-paused", state.tickerPaused);
